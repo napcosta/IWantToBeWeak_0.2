@@ -2,10 +2,10 @@ IWantToBeWeak_0.2
 =================
 
 Movement:
-  * UP - 'W'
-  * DOWN - 'S'
-  * RIGHT - 'D'
-  * LEFT - 'A'
+  * up - 'W'
+  * down - 'S'
+  * right - 'D'
+  * left - 'A'
   
 Fire:
   * Point and click
