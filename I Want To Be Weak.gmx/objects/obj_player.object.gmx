@@ -270,6 +270,19 @@ if( place_meeting(x + area_arround,y,obj_grid_human) ||
     draw_text(obj_grid_human.x - 130 - view_xview[0], obj_grid_human.y - 45 - view_yview[0] , "If you want to save the humans");
     draw_text(obj_grid_human.x - 80 - view_xview[0], obj_grid_human.y - 35 - view_yview[0] , "give me your powers.");
 }
+
+if( place_meeting(x + area_arround,y,obj_zeus) || 
+    place_meeting(x - area_arround,y,obj_zeus) || 
+    place_meeting(x,y + area_arround,obj_zeus) || 
+    place_meeting(x,y - area_arround,obj_zeus) ||
+    place_meeting(x + area_arround,y + area_arround,obj_zeus) ||
+    place_meeting(x + area_arround,y - area_arround,obj_zeus) ||
+    place_meeting(x - area_arround,y + area_arround,obj_zeus) ||
+    place_meeting(x - area_arround,y - area_arround,obj_zeus)) {
+    
+    draw_text(obj_zeus.x - 400 - view_xview[0], obj_zeus.y - 90 - view_yview[0] , "Do not enter the realm of the mortals. You'll end up making it worse");
+    draw_text(obj_zeus.x - 360 - view_xview[0], obj_zeus.y - 70 - view_yview[0] , "That's why we gods do not interfere, we are too powerful!");
+}
 </string>
           </argument>
         </arguments>

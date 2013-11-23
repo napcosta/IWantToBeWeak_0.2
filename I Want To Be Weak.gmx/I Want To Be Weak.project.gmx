@@ -41,10 +41,13 @@
     <sprite>sprites\spr_rock</sprite>
     <sprite>sprites\spr_tree</sprite>
     <sprite>sprites\spr_grid_human</sprite>
+    <sprite>sprites\spr_cloud</sprite>
+    <sprite>sprites\spr_zeus</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
     <background>background\grass</background>
+    <background>background\heaven</background>
   </backgrounds>
   <paths name="paths"/>
   <fonts name="fonts">
@@ -62,8 +65,12 @@
     <object>objects\obj_v01</object>
     <object>objects\obj_e01</object>
     <object>objects\obj_grid_human</object>
+    <object>objects\obj_cloud</object>
+    <object>objects\obj_zeus</object>
+    <object>objects\obj_change_room</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_0</room>
     <room>rooms\rm_01</room>
   </rooms>
   <help>
