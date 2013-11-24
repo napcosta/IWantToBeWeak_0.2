@@ -402,24 +402,6 @@ if (health &lt; 1)
             <kind>1</kind>
             <string>area_arround = 40;
 
-if(place_meeting(x + area_arround,y,obj_grid_human) || 
-    place_meeting(x - area_arround,y,obj_grid_human) || 
-    place_meeting(x,y + area_arround,obj_grid_human) || 
-    place_meeting(x,y - area_arround,obj_grid_human) ||
-    place_meeting(x + area_arround,y + area_arround,obj_grid_human) ||
-    place_meeting(x + area_arround,y - area_arround,obj_grid_human) ||
-    place_meeting(x - area_arround,y + area_arround,obj_grid_human) ||
-    place_meeting(x - area_arround,y - area_arround,obj_grid_human)) {
-        
-        if(mouse_check_button_pressed(mb_right))
-            n_texts--;
-            
-        if(n_texts == 1)
-            draw_text(obj_grid_human.x - 130 - view_xview[0], obj_grid_human.y - 45 - view_yview[0] , "The dark forces have hostages");
-        else if (n_texts == 0)
-            draw_text(obj_grid_human.x - 80 - view_xview[0], obj_grid_human.y - 35 - view_yview[0] , "give me your powers.");
-}
-
     if( place_meeting(x + area_arround,y,obj_zeus) || 
         place_meeting(x - area_arround,y,obj_zeus) || 
         place_meeting(x,y + area_arround,obj_zeus) || 
