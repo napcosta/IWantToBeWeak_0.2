@@ -40,6 +40,7 @@ image_speed = 0.2;
 stop_movement = false;
 
 has_hunger = false;
+n_texts = 2;
 
 alarm[1] = HUNGER_TIMER;
 </string>
@@ -231,26 +232,12 @@ y = min(max(y, 0 + sprite_yoffset), room_height + sprite_yoffset - sprite_height
 
 sprite_index = player_sprite;
 
+if (health &lt; 1)
+    game_restart();
 
 </string>
           </argument>
         </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_cloud">
-      <action>
-        <libid>1</libid>
-        <id>124</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_path_end</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
       </action>
     </event>
     <event eventtype="4" ename="obj_e01">
@@ -271,6 +258,32 @@ sprite_index = player_sprite;
           <argument>
             <kind>0</kind>
             <string>health - 10</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="par_obstacle">
+      <action>
+        <libid>1</libid>
+        <id>115</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_bounce</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>
@@ -389,7 +402,7 @@ sprite_index = player_sprite;
             <kind>1</kind>
             <string>area_arround = 40;
 
-if( place_meeting(x + area_arround,y,obj_grid_human) || 
+if(place_meeting(x + area_arround,y,obj_grid_human) || 
     place_meeting(x - area_arround,y,obj_grid_human) || 
     place_meeting(x,y + area_arround,obj_grid_human) || 
     place_meeting(x,y - area_arround,obj_grid_human) ||
@@ -397,23 +410,28 @@ if( place_meeting(x + area_arround,y,obj_grid_human) ||
     place_meeting(x + area_arround,y - area_arround,obj_grid_human) ||
     place_meeting(x - area_arround,y + area_arround,obj_grid_human) ||
     place_meeting(x - area_arround,y - area_arround,obj_grid_human)) {
-    
-    draw_text(obj_grid_human.x - 130 - view_xview[0], obj_grid_human.y - 45 - view_yview[0] , "If you want to save the humans");
-    draw_text(obj_grid_human.x - 80 - view_xview[0], obj_grid_human.y - 35 - view_yview[0] , "give me your powers.");
+        
+        if(mouse_check_button_pressed(mb_right))
+            n_texts--;
+            
+        if(n_texts == 1)
+            draw_text(obj_grid_human.x - 130 - view_xview[0], obj_grid_human.y - 45 - view_yview[0] , "The dark forces have hostages");
+        else if (n_texts == 0)
+            draw_text(obj_grid_human.x - 80 - view_xview[0], obj_grid_human.y - 35 - view_yview[0] , "give me your powers.");
 }
 
-if( place_meeting(x + area_arround,y,obj_zeus) || 
-    place_meeting(x - area_arround,y,obj_zeus) || 
-    place_meeting(x,y + area_arround,obj_zeus) || 
-    place_meeting(x,y - area_arround,obj_zeus) ||
-    place_meeting(x + area_arround,y + area_arround,obj_zeus) ||
-    place_meeting(x + area_arround,y - area_arround,obj_zeus) ||
-    place_meeting(x - area_arround,y + area_arround,obj_zeus) ||
-    place_meeting(x - area_arround,y - area_arround,obj_zeus)) {
-    
-    draw_text(obj_zeus.x - 320 - view_xview[0], obj_zeus.y - 90 - view_yview[0] , "Do not enter the realm of the mortals. You'll end up making it worse");
-    draw_text(obj_zeus.x - 280 - view_xview[0], obj_zeus.y - 70 - view_yview[0] , "That's why we gods do not interfere, we are too powerful!");
-}
+    if( place_meeting(x + area_arround,y,obj_zeus) || 
+        place_meeting(x - area_arround,y,obj_zeus) || 
+        place_meeting(x,y + area_arround,obj_zeus) || 
+        place_meeting(x,y - area_arround,obj_zeus) ||
+        place_meeting(x + area_arround,y + area_arround,obj_zeus) ||
+        place_meeting(x + area_arround,y - area_arround,obj_zeus) ||
+        place_meeting(x - area_arround,y + area_arround,obj_zeus) ||
+        place_meeting(x - area_arround,y - area_arround,obj_zeus)) {
+        
+        draw_text(obj_zeus.x - 320 - view_xview[0], obj_zeus.y - 90 - view_yview[0] , "Do not enter the realm of the mortals. You'll end up making it worse");
+        draw_text(obj_zeus.x - 280 - view_xview[0], obj_zeus.y - 70 - view_yview[0] , "That's why we gods do not interfere, we are too powerful!");
+    }
 </string>
           </argument>
         </arguments>
