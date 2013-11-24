@@ -43,6 +43,9 @@
     <sprite>sprites\spr_grid_human</sprite>
     <sprite>sprites\spr_cloud</sprite>
     <sprite>sprites\spr_zeus</sprite>
+    <sprite>sprites\spr_path_line</sprite>
+    <sprite>sprites\spr_path_curve</sprite>
+    <sprite>sprites\spr_food</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -68,6 +71,9 @@
     <object>objects\obj_cloud</object>
     <object>objects\obj_zeus</object>
     <object>objects\obj_change_room</object>
+    <object>objects\obj_path_line</object>
+    <object>objects\obj_path_curve</object>
+    <object>objects\obj_food</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_0</room>

@@ -68,8 +68,10 @@ if(place_meeting(x + area_arround,y,obj_player) ||
             draw_text(x - 130 - view_xview[0], y - 45 - view_yview[0] , "The dark forces have hostages");
         else if (n_texts == 0)
             draw_text(x - 80 - view_xview[0], y - 35 - view_yview[0] , "give me your powers.");
-        else if (n_texts &lt; 0)
+        else if (n_texts &lt; 0) {
             obj_player.stop_movement = false;
+            n_texts = 2;
+        }
 }
 </string>
           </argument>
