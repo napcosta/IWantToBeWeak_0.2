@@ -50,6 +50,14 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="640" hview="480" xport="0" yport="0" wport="640" hport="480" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
+    <instance objName="obj_path_line" x="416" y="350" name="inst_4DD26C07" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_path_line" x="382" y="421" name="inst_1F79A11C" locked="0" code="" scaleX="-1" scaleY="1" colour="4294967295" rotation="90"/>
+    <instance objName="obj_path_line" x="417" y="257" name="inst_98A7F1A9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_path_line" x="319" y="486" name="inst_5527A3AC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_path_line" x="319" y="579" name="inst_E30B7FAE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_path_curve" x="318" y="420" name="inst_A9251B85" locked="0" code="" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_path_curve" x="417" y="420" name="inst_F23944CB" locked="0" code="" scaleX="-1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_path_line" x="319" y="486" name="inst_C0EF9E97" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock" x="96" y="160" name="inst_51D6AC3B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock" x="195" y="109" name="inst_C6BE6575" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock" x="156" y="143" name="inst_B2B29631" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -91,6 +99,10 @@
     <instance objName="obj_wrap" x="1" y="473" name="inst_90058314" locked="0" code="view_x = 0;&#xA;view_y = 480;&#xA;&#xA;target_x = obj_player.x;&#xA;target_y = 530;&#xA;&#xA;move_direction = DOWN;" scaleX="20" scaleY="0.193547993898392" colour="4294967295" rotation="0"/>
     <instance objName="obj_wrap" x="0" y="481" name="inst_8139E4E7" locked="0" code="view_x = 0;&#xA;view_y = 0;&#xA;&#xA;target_x = obj_player.x;&#xA;target_y = 420;&#xA;&#xA;move_direction = UP;" scaleX="20" scaleY="0.193547993898392" colour="4294967295" rotation="0"/>
     <instance objName="obj_grid_human" x="307" y="725" name="inst_AEE66AF4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_food" x="182" y="699" name="inst_5A1FB675" locked="0" code="" scaleX="0.200000002980232" scaleY="0.200000002980232" colour="4294967295" rotation="0"/>
+    <instance objName="obj_food" x="61" y="777" name="inst_DBC40F52" locked="0" code="" scaleX="0.200000002980232" scaleY="0.200000002980232" colour="4294967295" rotation="0"/>
+    <instance objName="obj_food" x="160" y="776" name="inst_471C101A" locked="0" code="" scaleX="0.200000002980232" scaleY="0.200000002980232" colour="4294967295" rotation="0"/>
+    <instance objName="obj_tree" x="99" y="676" name="inst_58CB461B" locked="0" code="" scaleX="0.200000002980232" scaleY="0.200000002980232" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
