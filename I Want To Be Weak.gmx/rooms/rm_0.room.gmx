@@ -71,8 +71,8 @@
     <instance objName="obj_cloud" x="160" y="0" name="inst_D3645E01" locked="0" code="" scaleX="0.827585995197296" scaleY="0.727272987365723" colour="4294967295" rotation="0"/>
     <instance objName="obj_cloud" x="96" y="0" name="inst_2BEE1AFF" locked="0" code="" scaleX="0.827585995197296" scaleY="0.727272987365723" colour="4294967295" rotation="0"/>
     <instance objName="obj_cloud" x="32" y="0" name="inst_4EAAD16A" locked="0" code="" scaleX="0.827585995197296" scaleY="0.727272987365723" colour="4294967295" rotation="0"/>
-    <instance objName="obj_player" x="192" y="256" name="inst_2618EC51" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_zeus" x="416" y="192" name="inst_FF7287A7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_player" x="320" y="160" name="inst_2618EC51" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_zeus" x="352" y="352" name="inst_FF7287A7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_cloud" x="352" y="0" name="inst_736AB51D" locked="0" code="" scaleX="0.827585995197296" scaleY="0.727272987365723" colour="4294967295" rotation="0"/>
     <instance objName="obj_cloud" x="416" y="0" name="inst_5D744634" locked="0" code="" scaleX="0.827585995197296" scaleY="0.727272987365723" colour="4294967295" rotation="0"/>
     <instance objName="obj_cloud" x="480" y="0" name="inst_D2C189B8" locked="0" code="" scaleX="0.827585995197296" scaleY="0.727272987365723" colour="4294967295" rotation="0"/>
