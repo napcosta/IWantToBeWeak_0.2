@@ -51,6 +51,7 @@
     <sprite>sprites\spr_mountain_closed_door</sprite>
     <sprite>sprites\spr_sky</sprite>
     <sprite>sprites\spr_bomb</sprite>
+    <sprite>sprites\spr_scroll</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -73,7 +74,7 @@
     <object>objects\par_obstacle</object>
     <object>objects\obj_v01</object>
     <object>objects\obj_e01</object>
-    <object>objects\obj_grid_human</object>
+    <object>objects\obj_gridy_human</object>
     <object>objects\obj_cloud</object>
     <object>objects\obj_zeus</object>
     <object>objects\obj_change_room</object>
@@ -86,6 +87,7 @@
     <object>objects\obj_barrier</object>
     <object>objects\obj_sky</object>
     <object>objects\obj_bomb</object>
+    <object>objects\obj_scroll</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_0</room>
