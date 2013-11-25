@@ -71,7 +71,7 @@ if(place_meeting(x + area_arround,y,obj_player) ||
         else if (n_texts == 0) {
             draw_text(x - 80 - view_xview[0], y - 35 - view_yview[0] , "give me your powers.");
             if(!has_spawn_scroll) {
-                instance_create(x+200, y, obj_scroll);
+                instance_create(x, y+200, obj_scroll);
                 has_spawn_scroll = true;
             }
         } else if (n_texts &lt; 0) {
