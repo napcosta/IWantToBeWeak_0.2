@@ -150,6 +150,8 @@ direction_x = mouse_x - x;
 direction_y = mouse_y - y;
 
 length = sqrt(sqr(direction_x) + sqr(direction_y));
+if (length == 0)
+    length = 0.00001;
 
 direction_x = direction_x / length;
 direction_y = direction_y / length;
