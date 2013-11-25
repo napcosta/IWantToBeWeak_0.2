@@ -156,7 +156,7 @@ if (length == 0)
 direction_x = direction_x / length;
 direction_y = direction_y / length;
 
-if(Key_Left || Key_Right || Key_Top || Key_Bottom) {
+if(Key_Left || Key_Right || Key_Top || Key_Bottom &amp;&amp; !is_checking_map) {
 
     if (abs(direction_x) &gt; abs(direction_y)) {
         if(direction_x &gt; 0) 
@@ -241,6 +241,9 @@ x = min(max(x, 0 + sprite_xoffset), room_width + sprite_xoffset - sprite_width);
 y = min(max(y, 0 + sprite_yoffset), room_height + sprite_yoffset - sprite_height);
 
 sprite_index = player_sprite;
+
+if (room == rm_0)
+    health = 100;
 
 if (health &lt; 1)
     game_restart();
