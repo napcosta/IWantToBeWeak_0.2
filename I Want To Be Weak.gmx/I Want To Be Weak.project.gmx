@@ -46,11 +46,17 @@
     <sprite>sprites\spr_path_line</sprite>
     <sprite>sprites\spr_path_curve</sprite>
     <sprite>sprites\spr_food</sprite>
+    <sprite>sprites\spr_mountain</sprite>
+    <sprite>sprites\spr_mountain_door</sprite>
+    <sprite>sprites\spr_mountain_closed_door</sprite>
+    <sprite>sprites\spr_sky</sprite>
+    <sprite>sprites\spr_bomb</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
     <background>background\grass</background>
     <background>background\heaven</background>
+    <background>background\mountai</background>
   </backgrounds>
   <paths name="paths"/>
   <fonts name="fonts">
@@ -75,6 +81,11 @@
     <object>objects\obj_path_curve</object>
     <object>objects\obj_food</object>
     <object>objects\par_hide_map</object>
+    <object>objects\obj_mountain</object>
+    <object>objects\obj_mountain_door</object>
+    <object>objects\obj_barrier</object>
+    <object>objects\obj_sky</object>
+    <object>objects\obj_bomb</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_0</room>
