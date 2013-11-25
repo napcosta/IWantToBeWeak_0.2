@@ -74,6 +74,7 @@
     <object>objects\obj_path_line</object>
     <object>objects\obj_path_curve</object>
     <object>objects\obj_food</object>
+    <object>objects\par_hide_map</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_0</room>
