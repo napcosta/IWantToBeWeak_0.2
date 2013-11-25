@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>room_goto(rm_01);
 obj_player.x = room_width/2.0;
-obj_player.y = room_height/2.0;
+obj_player.y = 720;
 </string>
           </argument>
         </arguments>
