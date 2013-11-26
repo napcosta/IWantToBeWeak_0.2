@@ -50,8 +50,6 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="640" hview="480" xport="0" yport="0" wport="640" hport="480" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_sky" x="297" y="95" name="inst_234D5491" locked="0" code="" scaleX="1.63999998569489" scaleY="0.977999985218048" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mountain" x="322" y="200" name="inst_1771E734" locked="0" code="" scaleX="1.79458999633789" scaleY="1.74058997631073" colour="4294967295" rotation="0"/>
     <instance objName="obj_path_line" x="416" y="830" name="inst_4DD26C07" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_path_line" x="382" y="901" name="inst_1F79A11C" locked="0" code="" scaleX="-1" scaleY="1" colour="4294967295" rotation="90"/>
     <instance objName="obj_path_line" x="417" y="737" name="inst_98A7F1A9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -110,6 +108,10 @@
     <instance objName="obj_barrier" x="-7" y="-24" name="inst_2110507D" locked="0" code="" scaleX="20.871000289917" scaleY="11.0312995910645" colour="4294967295" rotation="0"/>
     <instance objName="obj_cloud" x="33" y="55" name="inst_22E369EC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_cloud" x="481" y="25" name="inst_C098FD23" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="&lt;undefined&gt;" x="318" y="348" name="inst_A79D25C2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sky" x="317" y="114" name="inst_00D6CA44" locked="0" code="" scaleX="1.432000041008" scaleY="0.973999977111816" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mountain" x="318" y="212" name="inst_F807A98F" locked="0" code="" scaleX="1.93243002891541" scaleY="1.61666667461395" colour="4294967295" rotation="0"/>
+    <instance objName="obj_cross" x="310" y="355" name="inst_E33698F2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

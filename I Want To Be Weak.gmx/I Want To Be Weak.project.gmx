@@ -52,6 +52,7 @@
     <sprite>sprites\spr_sky</sprite>
     <sprite>sprites\spr_bomb</sprite>
     <sprite>sprites\spr_scroll</sprite>
+    <sprite>sprites\spr_cross</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -83,11 +84,10 @@
     <object>objects\obj_food</object>
     <object>objects\par_hide_map</object>
     <object>objects\obj_mountain</object>
-    <object>objects\obj_mountain_door</object>
     <object>objects\obj_barrier</object>
     <object>objects\obj_sky</object>
-    <object>objects\obj_bomb</object>
     <object>objects\obj_scroll</object>
+    <object>objects\obj_cross</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_0</room>

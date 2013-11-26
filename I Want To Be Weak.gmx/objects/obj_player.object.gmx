@@ -3,9 +3,9 @@
   <spriteName>spr_still_back</spriteName>
   <solid>-1</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-1000</depth>
   <persistent>-1</persistent>
-  <parentName>self</parentName>
+  <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -44,7 +44,7 @@ n_texts = 2;
 
 alarm[1] = HUNGER_TIMER;
 
-has_map = true; 
+has_map = false; 
 is_checking_map = false;
 
 fireball_scale = 0.15;
@@ -271,6 +271,10 @@ if (health &lt; 1)
           <argument>
             <kind>1</kind>
             <string>fireball_scale = 0.05;
+has_map = true;
+
+instance_create(200, 380, obj_e01);
+instance_create(550, 380, obj_e01);
 </string>
           </argument>
         </arguments>
@@ -520,7 +524,7 @@ if (health &lt; 1)
     view_visible[1]=1;
     is_checking_map = true;
     instance_deactivate_object(par_hide_map);
-
+    obj_cross.visible = true;
 
 } else {
     
@@ -528,6 +532,7 @@ if (health &lt; 1)
     view_visible[1] = 0;
     is_checking_map = false;
     instance_activate_all();
+    obj_cross.visible = false;
 }
 
 </string>
