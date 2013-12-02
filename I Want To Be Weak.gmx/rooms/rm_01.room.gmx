@@ -10,7 +10,9 @@
   <persistent>0</persistent>
   <colour>16776960</colour>
   <showcolour>-1</showcolour>
-  <code>view_yview[0] = 480;</code>
+  <code>view_yview[0] = 480;
+obj_player.x = span_player.x;
+obj_player.y = span_player.y;</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <makerSettings>
@@ -30,9 +32,9 @@
     <yoffset>0</yoffset>
   </makerSettings>
   <backgrounds>
-    <background visible="-1" foreground="0" name="grass" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
+    <background visible="-1" foreground="0" name="bg_grass" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="-1" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="0" hspeed="0" vspeed="0" stretch="0"/>
-    <background visible="0" foreground="0" name="heaven" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
+    <background visible="0" foreground="0" name="bg_heaven" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -111,7 +113,9 @@
     <instance objName="&lt;undefined&gt;" x="318" y="348" name="inst_A79D25C2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_sky" x="317" y="114" name="inst_00D6CA44" locked="0" code="" scaleX="1.432000041008" scaleY="0.973999977111816" colour="4294967295" rotation="0"/>
     <instance objName="obj_mountain" x="318" y="212" name="inst_F807A98F" locked="0" code="" scaleX="1.93243002891541" scaleY="1.61666667461395" colour="4294967295" rotation="0"/>
-    <instance objName="obj_cross" x="310" y="355" name="inst_E33698F2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_cross" x="411" y="347" name="inst_E33698F2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="span_player" x="330" y="741" name="inst_801B8F74" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="&lt;undefined&gt;" x="0" y="0" name="inst_FC45B622" locked="0" code="" scaleX="0" scaleY="0" colour="0" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
