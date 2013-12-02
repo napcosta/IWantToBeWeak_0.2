@@ -39,8 +39,6 @@ velocity = 3;
 current_velocity_x = 0;
 current_velocity_y = 0;
 
-HUNGER_TIMER = 50;
-
 player_sprite = spr_still_front;
 image_speed = 0.2;
 
@@ -48,8 +46,6 @@ stop_movement = false;
 
 is_vulnerable = false;
 n_texts = 2;
-
-alarm[1] = HUNGER_TIMER;
 
 has_map = false; 
 is_checking_map = false;
@@ -90,33 +86,6 @@ facingRight = true; //not used
           <argument>
             <kind>0</kind>
             <string>100</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="1">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if(is_vulnerable) {
-    health--;
-}
-
-alarm[1] = HUNGER_TIMER;
-</string>
           </argument>
         </arguments>
       </action>
@@ -278,19 +247,6 @@ if(mouse_check_button(mb_left) &amp;&amp; can_fireball) {
     can_fireball = false;
     alarm[0] = 20;
 }
-/*
-if (place_meeting(x+current_velocity_x,y, par_obstacle)) {
-    while(!place_meeting(x+sign(current_velocity_x), y, par_obstacle))
-        x += sign(current_velocity_x);
-    current_velocity_x = 0;
-}
-
-if (place_meeting(x,y + current_velocity_y, par_obstacle)) {
-    while(place_meeting(x, y + sign(current_velocity_y), par_obstacle))
-        y += sign(current_velocity_y);
-    current_velocity_y = 0;
-}
-*/
 
 if(stop_movement){
     current_velocity_x = 0;
@@ -853,6 +809,7 @@ instance_create(550, 380, obj_e01);
     is_checking_map = true;
     instance_deactivate_object(par_hide_map);
     obj_cross.visible = true;
+    is_vulnerable = false;
 
 } else {
     
@@ -861,6 +818,7 @@ instance_create(550, 380, obj_e01);
     is_checking_map = false;
     instance_activate_all();
     obj_cross.visible = false;
+    is_vulnerable = true;
 }
 
 </string>
