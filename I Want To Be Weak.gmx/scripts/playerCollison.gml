@@ -1,8 +1,8 @@
 grounded = false;
 
 //collision with enemy
-if place_meeting(x, y, obj_e01) {
-    hsp += 2* (self.x - obj_e01.x);
+if place_meeting(x, y, obj_enemy) {
+    hsp += 2* (self.x - obj_enemy.x);
     health -= 25;
 }
 //collision with enemy shot

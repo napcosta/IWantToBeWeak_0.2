@@ -343,7 +343,6 @@ obj_player.y = span_player.y;</code>
     <instance objName="obj_wall" x="288" y="64" name="inst_2811969D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="352" y="64" name="inst_76D62CF8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_e01" x="320" y="256" name="inst_63D294B0" locked="0" code="" scaleX="5.33333349227905" scaleY="0" colour="4294967295" rotation="0"/>
-    <instance objName="span_player" x="32" y="256" name="inst_CA4B53FE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="-32" y="256" name="inst_A9391723" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="-32" y="224" name="inst_E1A802BB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="-32" y="192" name="inst_B8366B6E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -456,8 +455,8 @@ obj_player.y = span_player.y;</code>
     <instance objName="obj_wall" x="-32" y="352" name="inst_80DFD024" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="-32" y="320" name="inst_AD956904" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="-32" y="288" name="inst_9E0C9AEF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_inventory" x="15" y="6" name="inst_35D8B1DE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_e01" x="480" y="256" name="inst_2E39F0C9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_playerHealth" x="64" y="32" name="inst_301D396E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_inventory" x="32" y="32" name="inst_6ECE8484" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

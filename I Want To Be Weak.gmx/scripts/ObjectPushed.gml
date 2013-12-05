@@ -2,23 +2,23 @@ Key_ObjPushed = mouse_check_button(mb_left);
 
 if(Key_ObjPushed && false) //temp
 {
-    if(obj_player.Key_Left and place_meeting(x+2, y, obj_player))
+    if(obj_playerSS.Key_Left and place_meeting(x+2, y, obj_playerSS))
     {
-         hsp -=obj_player.throwForce;
+         hsp -=obj_playerSS.throwForce;
     }
-    else if (obj_player.Key_Right and place_meeting(x-2, y, obj_player))
+    else if (obj_playerSS.Key_Right and place_meeting(x-2, y, obj_playerSS))
     {
-        hsp +=obj_player.throwForce;
+        hsp +=obj_playerSS.throwForce;
     }
-    else if((obj_player.Key_Right and obj_player.Key_Left))
+    else if((obj_playerSS.Key_Right and obj_playerSS.Key_Left))
     {
-        if place_meeting(x-2, y, obj_player)
+        if place_meeting(x-2, y, obj_playerSS)
         {
-            hsp += obj_player.throwForce;
+            hsp += obj_playerSS.throwForce;
         }
-        else if place_meeting(x+2, y, obj_player)
+        else if place_meeting(x+2, y, obj_playerSS)
         { 
-            hsp -= obj_player.throwForce;
+            hsp -= obj_playerSS.throwForce;
         }
     }
 }
