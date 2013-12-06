@@ -33,6 +33,7 @@
       <sprite>sprites\spr_warp</sprite>
       <sprite>sprites\spr_food</sprite>
       <sprite>sprites\spr_bomb</sprite>
+      <sprite>sprites\spr_light</sprite>
       <sprite>sprites\spr_scroll</sprite>
       <sprite>sprites\spr_cross</sprite>
       <sprites name="Environment">
@@ -78,14 +79,14 @@
     </sprites>
     <sprites name="SIDE SCROLLER">
       <sprites name="Player">
-        <sprite>sprites\spr_enemySS</sprite>
-        <sprite>sprites\spr_housedstr</sprite>
-        <sprite>sprites\spr_light</sprite>
         <sprite>sprites\spr_playerSS</sprite>
-        <sprite>sprites\sprt_water</sprite>
         <sprite>sprites\spr_shot</sprite>
-        <sprite>sprites\spr_stairs</sprite>
       </sprites>
+      <sprite>sprites\spr_enemySS</sprite>
+      <sprite>sprites\spr_housedstr</sprite>
+      <sprite>sprites\sprt_water</sprite>
+      <sprite>sprites\spr_stairs</sprite>
+      <sprite>sprites\spr_enemyShot</sprite>
     </sprites>
     <sprite>sprites\spr_inventoryIcon</sprite>
     <sprite>sprites\spr_hpIcon</sprite>
@@ -158,26 +159,25 @@
     </objects>
     <objects name="SIDE SCROLLER">
       <object>objects\obj_house</object>
+      <object>objects\obj_water</object>
       <object>objects\obj_stair</object>
-      <object>objects\obj_shot</object>
-      <object>objects\obj_enemyShot</object>
       <object>objects\obj_inventory</object>
       <object>objects\obj_hostage</object>
       <objects name="Player">
         <object>objects\obj_playerHealth</object>
-        <object>objects\obj_water</object>
         <object>objects\obj_playerSS</object>
+        <object>objects\obj_shot</object>
       </objects>
       <objects name="enemy">
-        <object>objects\obj_enemyShotSS</object>
         <object>objects\obj_enemy</object>
+        <object>objects\obj_enemyShot</object>
       </objects>
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm__Prototype1</room>
     <room>rooms\rm_0</room>
     <room>rooms\rm_01</room>
-    <room>rooms\rm__Prototype1</room>
     <room>rooms\rm_platformsTest</room>
   </rooms>
   <help>

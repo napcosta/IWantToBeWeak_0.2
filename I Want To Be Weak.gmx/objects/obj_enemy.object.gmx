@@ -31,6 +31,9 @@ vsp = 0;
 jump = -7;
 grav = 0.5;
 grounded = true;
+
+image_index = 1;
+image_speed = 0;
 </string>
           </argument>
         </arguments>
@@ -156,30 +159,6 @@ grounded = true;
     <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
-        <id>301</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_set_alarm</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>27</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
         <id>603</id>
         <kind>7</kind>
         <userelative>0</userelative>
@@ -215,6 +194,30 @@ with (shotId) {
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>301</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_alarm</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>27</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="3" enumb="0">
       <action>
@@ -233,8 +236,7 @@ with (shotId) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_index = 1;
-
+            <string>//apply gravity
 vsp += grav;
 
 if place_meeting(x, y+vsp ,par_wall)
@@ -246,7 +248,8 @@ if place_meeting(x, y+vsp ,par_wall)
 }
 
 y += vsp;
-
+//enemy turns to player
+self.image_xscale = sign(self.x-obj_playerSS.x);
 
 //enemy gets red when looses HP
 if alarm[2] &gt; 0

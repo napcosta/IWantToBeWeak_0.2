@@ -5,40 +5,44 @@ Key_Up = keyboard_check_direct(ord('W'));
 Key_Down = keyboard_check_direct(ord('S'));
 
 if (Key_Left) {
-    hsp = -4;
-    facingRight = false;
-    image_xscale = 1;
+    if (onStairs)
+        hsp = -2;
+    else
+        hsp = -4;
+        
+    self.image_xscale = 1;
+} else if (Key_Right) {
+           if (onStairs)
+                hsp = 2;
+            else
+                hsp = 4;
+        
+            self.image_xscale = -1;
+        } else { //hsp friction
+            if (abs(hsp) > 0.9)
+                hsp *= 0.6;
+            else
+                hsp = 0;
 }
 
-if (Key_Right) {
-    hsp = 4;
-    facingRight = true;
-    image_xscale = -1;
-}
-
-if((Key_Right and Key_Left) or (!Key_Right and !Key_Left))
-{
-    hsp = 0;
-}
-
+//jump
 if(Key_Jump and grounded) {
     vsp=-7;
 }
-
+//gravity
 if (vsp <= 6) {
     vsp+=grav;
 }
-
+//climb while on stairs
 if (onStairs) {
     if(Key_Up)
-    vsp = -3;
+    vsp = -2.5;
     else if(Key_Down)
-    vsp = 3;
+    vsp = 2.5;
     else
     vsp = 0;
 }
-
-if(hsp == 0)
-{
+//lock img sprite on "standing"
+if(hsp == 0) {
     image_index = 1;
 }

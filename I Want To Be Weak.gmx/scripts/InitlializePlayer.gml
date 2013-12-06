@@ -9,6 +9,5 @@ damage = 10 * damageMultiplier;
 
 grounded = true;
 onStairs = false;
-facingRight = true; //not used
 
-image_speed = 10;
+self.image_speed = 0.5;

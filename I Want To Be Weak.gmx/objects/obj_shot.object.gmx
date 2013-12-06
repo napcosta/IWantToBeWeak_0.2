@@ -35,7 +35,7 @@ yratio = 1 - xratio;
 hsp = xdir * force * xratio;
 vsp = ydir * force * yratio;
 
-show_debug_message("a cena está criada -&gt; XRATIO=" + string(xratio) + "    YRATIO=" + string(yratio) + "    VSP=" + string(vsp) + "    HSP=" + string(hsp) + "    FORCE=" + string(force));
+show_debug_message("shot created -&gt; XRATIO=" + string(xratio) + "    YRATIO=" + string(yratio) + "    VSP=" + string(vsp) + "    HSP=" + string(hsp) + "    FORCE=" + string(force));
 </string>
           </argument>
         </arguments>
@@ -71,6 +71,22 @@ y+= vsp;
 </string>
           </argument>
         </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_enemy">
+      <action>
+        <libid>1</libid>
+        <id>203</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_kill_object</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
     <event eventtype="4" ename="obj_enemyShot">
