@@ -73,7 +73,7 @@ y+= vsp;
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_enemy">
+    <event eventtype="4" ename="obj_enemyShot">
       <action>
         <libid>1</libid>
         <id>203</id>
@@ -89,7 +89,7 @@ y+= vsp;
         <isnot>0</isnot>
       </action>
     </event>
-    <event eventtype="4" ename="obj_enemyShot">
+    <event eventtype="4" ename="obj_enemy">
       <action>
         <libid>1</libid>
         <id>203</id>
