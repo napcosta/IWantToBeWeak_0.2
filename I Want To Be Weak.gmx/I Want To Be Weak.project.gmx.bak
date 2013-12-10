@@ -137,7 +137,6 @@
     <sprite>sprites\spr_inventoryIcon</sprite>
     <sprite>sprites\spr_hpIcon</sprite>
     <sprite>sprites\spr_caveExit</sprite>
-    <sprite>sprites\spr_ammoPickup</sprite>
     <sprites name="Textbox">
       <sprite>sprites\spr_fontmain</sprite>
       <sprite>sprites\spr_textbox</sprite>
@@ -245,13 +244,12 @@
         <object>objects\obj_enemyShot</object>
       </objects>
       <object>objects\obj_caveExit</object>
-      <object>objects\obj_ammoPickup</object>
     </objects>
     <object>objects\obj_textbox</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_SSPrototype2</room>
     <room>rooms\rm_start</room>
+    <room>rooms\rm_SSPrototype2</room>
     <room>rooms\rm_SSPrototype1</room>
     <room>rooms\rm_0</room>
     <room>rooms\rm_01</room>
