@@ -250,12 +250,12 @@
     <object>objects\obj_textbox</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_SSPrototype2</room>
     <room>rooms\rm_start</room>
+    <room>rooms\rm_platformsTest</room>
+    <room>rooms\rm_SSPrototype2</room>
     <room>rooms\rm_SSPrototype1</room>
     <room>rooms\rm_0</room>
     <room>rooms\rm_01</room>
-    <room>rooms\rm_platformsTest</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

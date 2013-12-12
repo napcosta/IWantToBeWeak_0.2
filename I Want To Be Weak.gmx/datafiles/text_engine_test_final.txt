@@ -1,16 +1,6 @@
-[N:nacho_chicken][V:M]Welcome to the fourth version of my textbox engine.
-I will now dub this version:[P:20]#"The Definitive Dynamic Textbox Engine (V5)".
-What makes it so amazing?[P:20]  Well,[P:20] first off:
-The typing speed of the textbox can be changed within#the text engine itself.
-You can talk normally,[P:20]#[S:S]you can talk slow[S:N],[P:20]#and you can talk [S:R]REALLY[S:N] slow.
-You can also change the 'voice' used for talking.
-[V:L]The low voice is useful for older males.[P:20]#[V:M]The medium voice is useful for most people.[P:20]#[V:H]The high voice can be used for most females.
-[N:0][V:T](And there's a thought voice as well.)
-[N:nacho_chicken][V:M]Another thing you can do in this engine is add a pause.[P:60]  What?[P:20]#You haven't noticed it already?
-[V:M]You've also probably noticed the name box.[P:20]#This is also fully customizable.
-[N:Bizzaro nacho]New to V5 are animated character portraits.[P:20]#They work like the ones used in some RPGs,[P:20]#and you can use up to six at once by default
-[N:nacho_chicken]Also,[P:20] V5 stores text differently than previous versions.
-It stores all the text in text files,[P:10] perfect for circumventing#some of GM's flaws!
-[C:1]Colored text[C:C] is also available.
-There's a default of up to [C:1]four[C:C] per textbox, which is easily changed.[P:10]#Don't abuse [C:2]it[C:C], though. [P:20]Using it [C:3]too often[C:C] looks [C:4]really tacky[C:C].
-Well,[P:20] that's it for the basic run-through.[P:20]#Take a look at the Readme and the CMD Reference for more info.[P:20]#Be on the lookout for more info and a tutorial video coming soon!
+[V:M]Once upon a time,[P:20]#the Realm of the Mortals faced grave danger.
+A never before seen wicked force invaded and settled on Earth,#enslaving the Humans.
+The Guardians,[P:20] immortal and most powerful beings that watch over #the three realms of the universe, [P:20]were reluctant to act
+As they would be required to enter the Realm of the Mortals #themselves, [P:20]loosing their immortality.
+They believed the Humans should find strength within them, [P:20]unite,[P:20]#and defeat the invaders themselves.
+However, [P:20]time passed and Humanity suffered more and more.
