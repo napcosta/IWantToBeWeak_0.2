@@ -10,6 +10,7 @@ if (Key_Left) {
     else
         hsp = -4;
         
+     dir =-1;   
     self.image_xscale = 1;
 } else if (Key_Right) {
            if (onStairs)
@@ -18,10 +19,11 @@ if (Key_Left) {
                 hsp = 4;
         
             self.image_xscale = -1;
-        } else { //hsp friction
-            if (abs(hsp) > 0.9)
-                hsp *= 0.6;
-            else
+            dir = 1;
+} else { //hsp friction
+//            if (abs(hsp) > 0.9){}
+  //              //hsp *= 0.6;
+    //        else
                 hsp = 0;
 }
 

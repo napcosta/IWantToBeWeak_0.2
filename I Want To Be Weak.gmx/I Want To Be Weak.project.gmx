@@ -147,6 +147,7 @@
       <sprite>sprites\spr_textbox_questionbox</sprite>
       <sprite>sprites\spr_textbox_questionbox_cursor</sprite>
     </sprites>
+    <sprite>sprites\spr_collisionblock</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_grass</background>
@@ -171,6 +172,9 @@
     <scripts name="SIDE SCROLLER">
       <script>scripts\InitlializePlayer.gml</script>
       <script>scripts\playerCollison.gml</script>
+      <script>scripts\objectCollision.gml</script>
+      <script>scripts\createCollisionObjects.gml</script>
+      <script>scripts\destroyCollisionObjects.gml</script>
     </scripts>
     <scripts name="Textbox">
       <script>scripts\textbox_cmd_delete.gml</script>
@@ -239,6 +243,7 @@
         <object>objects\obj_playerHealth</object>
         <object>objects\obj_playerSS</object>
         <object>objects\obj_shot</object>
+        <object>objects\obj_collisionTest</object>
       </objects>
       <objects name="enemy">
         <object>objects\obj_enemy</object>
@@ -250,10 +255,10 @@
     <object>objects\obj_textbox</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_start</room>
-    <room>rooms\rm_platformsTest</room>
-    <room>rooms\rm_SSPrototype2</room>
     <room>rooms\rm_SSPrototype1</room>
+    <room>rooms\rm_platformsTest</room>
+    <room>rooms\rm_start</room>
+    <room>rooms\rm_SSPrototype2</room>
     <room>rooms\rm_0</room>
     <room>rooms\rm_01</room>
   </rooms>
