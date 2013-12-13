@@ -46,6 +46,7 @@ is_checking_map = false;
 fireball_scale = 0.15;
 
 is_isometric_view = true;
+is_moving = true;
 
 //side scroll variables
 vsp = 0;
@@ -234,11 +235,13 @@ if(stop_movement){
     current_velocity_y = 0;
 }
 
-x += current_velocity_x;
-y += current_velocity_y;
-
-x = min(max(x, 0 + sprite_xoffset), room_width + sprite_xoffset - sprite_width);
-y = min(max(y, 0 + sprite_yoffset), room_height + sprite_yoffset - sprite_height);
+if(is_moving) {
+    x += current_velocity_x;
+    y += current_velocity_y;
+    
+    x = min(max(x, 0 + sprite_xoffset), room_width + sprite_xoffset - sprite_width);
+    y = min(max(y, 0 + sprite_yoffset), room_height + sprite_yoffset - sprite_height);
+}
 
 sprite_index = player_sprite;
 

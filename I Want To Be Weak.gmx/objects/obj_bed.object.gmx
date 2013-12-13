@@ -51,7 +51,7 @@ player = instance_create(x-10, y+20, obj_player);
           <argument>
             <kind>1</kind>
             <string>if(obj_global_vars.last_room == room)
-    alarm[0] = 30;
+    alarm[0] = 200;
 </string>
           </argument>
         </arguments>

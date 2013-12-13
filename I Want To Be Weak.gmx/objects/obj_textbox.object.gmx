@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-2000</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -102,7 +102,9 @@ ds_queue_destroy(cmd_pos_queue);
             <kind>1</kind>
             <string>var i, file, temp_fname, text_queue, temp_text, loop_end;
 
-temp_fname="text_engine_test_final.txt"; //db
+obj_player.is_moving = false;
+
+temp_fname=file_name; //db
 test_level=32; //db
 
 //soon-to-be constants
@@ -165,8 +167,8 @@ textbox_fade_perstep=.1; //how much the textbox fades per step
 textbox_overall_alpha_max=.7;
 textbox_overall_alpha=0; //for the textbox surface
 
-textbox_x=0;
-textbox_y=room_height-128;
+textbox_x=view_xview[0];
+textbox_y=view_yview[0] + view_hview[0] - 128;
 textbox_sprite=spr_textbox;
 textbox_alpha=1;
 textbox_anim=0; //for animated textboxes
@@ -447,6 +449,7 @@ if (current_cutins&gt;0)
 if (textbox_closing &amp;&amp; fade_waiting==0) //quit the textbox if everything is already faded out
 {
   instance_destroy();
+  obj_player.is_moving = true;
 }
 
 //typing functioning
