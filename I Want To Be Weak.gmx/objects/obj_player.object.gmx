@@ -4,7 +4,7 @@
   <solid>-1</solid>
   <visible>-1</visible>
   <depth>-1000</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -25,14 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>ISOMETRIC = 0;
-SIDE_SCROLLER = 1;
-
-view = ISOMETRIC;
-
-// isometric
-
-fireball_speed = 8;
+            <string>fireball_speed = 8;
 can_fireball = true;
 
 velocity = 3;
@@ -52,17 +45,17 @@ is_checking_map = false;
 
 fireball_scale = 0.15;
 
-// side scroller
+is_isometric_view = true;
 
+//side scroll variables
 vsp = 0;
 hsp = 0;
 grav = 0.5;
-throwForce = 10;
-damageMultiplier = 1; // when stronger(almost god) has a higher multiplier
-damage = 10 * damageMultiplier;
-
-grounded = true;
-onStairs = false;
+grounded = 0;
+can_enter = false;
+RIGHT = 0;
+LEFT = 1;
+last_move = RIGHT;
 </string>
           </argument>
         </arguments>
@@ -128,11 +121,11 @@ onStairs = false;
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>view</string>
+            <string>is_isometric_view</string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>ISOMETRIC</string>
+            <string>true</string>
           </argument>
           <argument>
             <kind>4</kind>
@@ -236,16 +229,6 @@ if(Key_Left || Key_Right || Key_Top || Key_Bottom &amp;&amp; !is_checking_map) {
     current_velocity_y = 0;  
 }
 
-if(mouse_check_button(mb_left) &amp;&amp; can_fireball) {
-    fireball = instance_create(x,y, obj_fireball);
-    fireball.image_xscale = fireball_scale;
-    fireball.image_yscale = fireball_scale;
-    fireball.hspeed = direction_x*fireball_speed;
-    fireball.vspeed = direction_y*fireball_speed;
-    can_fireball = false;
-    alarm[0] = 20;
-}
-
 if(stop_movement){
     current_velocity_x = 0;
     current_velocity_y = 0;
@@ -265,7 +248,7 @@ if (room == rm_0)
 if (health &lt; 1) {
     show_message("That's not how it ends...");
     game_restart();
-    }
+}
 
 </string>
           </argument>
@@ -315,86 +298,6 @@ if (health &lt; 1) {
       </action>
       <action>
         <libid>1</libid>
-        <id>601</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_execute_script</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>9</kind>
-            <script>PlayerMovement</script>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>601</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_execute_script</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>9</kind>
-            <script>movementCommit</script>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
         <id>603</id>
         <kind>7</kind>
         <userelative>0</userelative>
@@ -409,52 +312,63 @@ if (health &lt; 1) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>MouseButton = mouse_check_button_pressed(mb_left);
+            <string>Key_Left = keyboard_check_direct(ord('A'));
+Key_Right = keyboard_check_direct(ord('D'));
+Key_Jump = keyboard_check_direct(vk_space);
+Key_Up = keyboard_check_direct(ord('W'));
 
-if (alarm[1] &lt; 0 and MouseButton) {
-    alarm[1] = 10;
-    //shoots
-    if obj_inventory.ammo&gt;0 and obj_inventory.inventoryList[selected] == "Slingshot" {
-        instance_create(obj_player.x, obj_player.y, obj_shot);
-        obj_inventory.ammo--;
-        
-        if obj_inventory.ammo == 0
-                    obj_inventory.wait = selected;
-    }
-    else if obj_inventory.dirtBlocks&gt;0 and
-                obj_inventory.inventoryList[selected] == "Dirt"{
-            //drops a dirt block
-            offset=sign(mouse_x - obj_player.x);
-            
-    
-            if ( place_empty(x+offset*32,y-3)) {
-                dirtID = instance_create(x+offset*44-14,y-3,obj_dirt);
-    
-                with (dirtID) {
-                    move_snap(32,32);
-                }
-                obj_inventory.dirtBlocks--;
-                
-                if obj_inventory.dirtBlocks == 0
-                    obj_inventory.wait = selected;
-            }
-    }
-    else if obj_inventory.stairBlocks&gt;0 and
-                obj_inventory.inventoryList[selected] == "Stair" {
-            //drops a stair block
-            if !(place_meeting(x,y,all) ) {
-                stairID = instance_create(x-5,y-4,obj_stair);
-    
-                with (stairID) {
-                    move_snap(32,32);
-                }
-                obj_inventory.stairBlocks--;
-                
-                if obj_inventory.stairBlocks == 0
-                    obj_inventory.wait = selected;
-            }
-    }
+if(Key_Left)
+{
+    hsp = -2;
+    sprite_index = spr_walk_left;
+    last_move = LEFT;
 }
+
+if(Key_Right)
+{
+    hsp = 2;
+    sprite_index = spr_walk_right;
+    last_move = RIGHT;
+}
+
+if((Key_Right &amp;&amp; Key_Left) or (!Key_Right &amp;&amp; !Key_Left))
+{
+    hsp = 0;
+    if(last_move == RIGHT)
+        sprite_index = spr_still_right;
+    else if(last_move == LEFT)
+        sprite_index = spr_still_left;
+}
+
+if(Key_Up &amp;&amp; can_enter) {
+    room = rm_father;
+    is_isometric_view = true;
+}
+
+if(Key_Jump)
+{
+    if(grounded) vsp = -7;
+}
+
+vsp += grav;
+
+if (place_meeting (x,y+vsp, par_wall)) {
+    while(!place_meeting(x, y+1, par_wall)) y += 1;
+    vsp = 0;
+    grounded = 1;
+} else {
+    grounded = 0;
+}
+
+if(place_meeting(x+hsp, y, par_wall))
+{
+    while (!place_meeting(x+sign(hsp), y, par_wall)) x += sign(hsp);
+    hsp = 0;
+}
+
+
+x += hsp;
+y += vsp;
 </string>
           </argument>
         </arguments>
@@ -472,6 +386,45 @@ if (alarm[1] &lt; 0 and MouseButton) {
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>direction_x = mouse_x - x;
+direction_y = mouse_y - y;
+
+length = sqrt(sqr(direction_x) + sqr(direction_y));
+if (length == 0)
+    length = 0.00001;
+
+direction_x = direction_x / length;
+direction_y = direction_y / length;
+
+if(mouse_check_button(mb_left) &amp;&amp; can_fireball) {
+    fireball = instance_create(x,y, obj_fireball);
+    fireball.image_xscale = fireball_scale;
+    fireball.image_yscale = fireball_scale;
+    fireball.hspeed = direction_x*fireball_speed;
+    fireball.vspeed = direction_y*fireball_speed;
+    can_fireball = false;
+    alarm[0] = 20;
+}
+</string>
+          </argument>
+        </arguments>
       </action>
     </event>
     <event eventtype="4" ename="obj_stair">
@@ -522,6 +475,34 @@ if (alarm[1] &lt; 0 and MouseButton) {
     <event eventtype="4" ename="par_obstacle">
       <action>
         <libid>1</libid>
+        <id>612</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_if_variable</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>is_isometric_view</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>true</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>115</id>
         <kind>0</kind>
         <userelative>0</userelative>
@@ -536,7 +517,7 @@ if (alarm[1] &lt; 0 and MouseButton) {
         <arguments>
           <argument>
             <kind>4</kind>
-            <string>0</string>
+            <string>1</string>
           </argument>
           <argument>
             <kind>4</kind>

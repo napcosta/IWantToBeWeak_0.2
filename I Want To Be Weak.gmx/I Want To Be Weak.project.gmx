@@ -85,7 +85,7 @@
       <sprites name="Environment">
         <sprite>sprites\spr_mountain_closed_door</sprite>
         <sprite>sprites\spr_sky</sprite>
-        <sprite>sprites\spr_mountain_door</sprite>
+        <sprite>sprites\spr_door</sprite>
         <sprite>sprites\spr_mountain</sprite>
         <sprite>sprites\spr_path_curve</sprite>
         <sprite>sprites\spr_path_line</sprite>
@@ -97,6 +97,8 @@
         <sprite>sprites\spr_house</sprite>
         <sprite>sprites\spr_housedst</sprite>
         <sprite>sprites\spr_dirt</sprite>
+        <sprite>sprites\spr_bed</sprite>
+        <sprite>sprites\spr_bed_empty</sprite>
       </sprites>
       <sprites name="NPC">
         <sprite>sprites\spr_zeus</sprite>
@@ -121,6 +123,7 @@
           <sprite>sprites\spr_e01_still_back</sprite>
           <sprite>sprites\spr_e01_still_front</sprite>
         </sprites>
+        <sprite>sprites\spr_heaven_npc</sprite>
       </sprites>
     </sprites>
     <sprites name="SIDE SCROLLER">
@@ -133,6 +136,9 @@
       <sprite>sprites\sprt_water</sprite>
       <sprite>sprites\spr_stairs</sprite>
       <sprite>sprites\spr_enemyShot</sprite>
+      <sprite>sprites\spr_background</sprite>
+      <sprite>sprites\spr_torch</sprite>
+      <sprite>sprites\spr_torch_light</sprite>
     </sprites>
     <sprite>sprites\spr_inventoryIcon</sprite>
     <sprite>sprites\spr_hpIcon</sprite>
@@ -214,6 +220,7 @@
         <object>objects\obj_player</object>
         <object>objects\obj_gridy_human</object>
         <object>objects\obj_zeus</object>
+        <object>objects\obj_heaven_npc</object>
       </objects>
       <objects name="Environment">
         <object>objects\obj_mountain</object>
@@ -228,6 +235,7 @@
         <object>objects\obj_dirt</object>
       </objects>
       <object>objects\span_player</object>
+      <object>objects\obj_bed</object>
     </objects>
     <objects name="SIDE SCROLLER">
       <object>objects\obj_house</object>
@@ -246,16 +254,23 @@
       </objects>
       <object>objects\obj_caveExit</object>
       <object>objects\obj_ammoPickup</object>
+      <object>objects\obj_torch</object>
+      <object>objects\obj_background</object>
+      <object>objects\obj_door</object>
     </objects>
     <object>objects\obj_textbox</object>
+    <object>objects\obj_global</object>
+    <object>objects\obj_global_vars</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_0</room>
+    <room>rooms\rm_dark</room>
     <room>rooms\rm_SSPrototype2</room>
     <room>rooms\rm_start</room>
     <room>rooms\rm_SSPrototype1</room>
-    <room>rooms\rm_0</room>
     <room>rooms\rm_01</room>
     <room>rooms\rm_platformsTest</room>
+    <room>rooms\rm_father</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
