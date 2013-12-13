@@ -32,7 +32,7 @@ if(Key_Jump and grounded) {
     vsp=-7;
 }
 //gravity
-if (vsp <= 8.5) {
+if (vsp <= 8) {
     vsp+=grav;
 }
 //climb while on stairs
