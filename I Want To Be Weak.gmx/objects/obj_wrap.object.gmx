@@ -33,6 +33,12 @@ LEFT = 3;
 start_moving = false;
 
 move_velocity = 30;
+
+move_direction = RIGHT;
+target_x = 0;
+target_y = 0;
+view_x = 0;
+view_y = 0;
 </string>
           </argument>
         </arguments>
@@ -56,10 +62,21 @@ move_velocity = 30;
           <argument>
             <kind>1</kind>
             <string>if(start_moving) {
-    if(move_direction == LEFT || move_direction == RIGHT){
-        if(view_xview[0] != view_x)
-            view_xview[0] += sign(view_xview[0] - view_x) * move_velocity;
-        else {
+    if(move_direction == LEFT){
+        if(view_xview[0] &gt; view_x){
+            view_xview[0] -= move_velocity;
+            if(view_xview[0] &lt; 0)
+                view_xview[0] = 0;
+        } else {
+            start_moving = false;
+            obj_player.stop_movement = false;
+        }
+    } else if (move_direction == RIGHT) {
+        if(view_xview[0] &lt; view_x){
+            view_xview[0] += move_velocity;
+            if(view_xview[0] + view_wview[0] &gt; room_width)
+                view_xview[0] = view_xview[0] - ((view_xview[0] + view_wview[0]) - room_width);
+        } else {
             start_moving = false;
             obj_player.stop_movement = false;
         }
