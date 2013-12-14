@@ -1,0 +1,7 @@
+[V:M]I may help you in your quest, 
+I've heard from reliable sources that the #minions have a hideout nearby
+I can give you the map, [P:20]But only if you give something to me...
+I would like you to share some of your power with me, [P:20]#That way I will help you to repel the invasion
+What? [P:20]you think it's a bad idea? #[P:20]Nevermind my help then!
+If you change your mind, [P:20]Pick up this map, #and share your powers with me.
+Otherwise, [P:20]find your own way
