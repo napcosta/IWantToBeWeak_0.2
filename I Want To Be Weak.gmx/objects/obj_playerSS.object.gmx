@@ -65,7 +65,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>objectCollision</script>
+            <script>createCollisionObjects</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -425,8 +425,6 @@ if (alarm[1] &lt; 0 and MouseButton) {
         <relative>0</relative>
         <isnot>0</isnot>
       </action>
-    </event>
-    <event eventtype="4" ename="obj_collisionTest">
       <action>
         <libid>1</libid>
         <id>601</id>
