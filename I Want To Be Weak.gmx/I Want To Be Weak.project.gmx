@@ -142,6 +142,8 @@
     <background>background\bg_heaven</background>
     <background>background\bg_mountain</background>
     <background>background\bg_cave</background>
+    <background>background\bg_intro_heaven</background>
+    <background>background\bg_intro_hell</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -219,6 +221,7 @@
       </objects>
       <object>objects\span_player</object>
       <object>objects\obj_bed</object>
+      <object>objects\obj_control</object>
     </objects>
     <objects name="SIDE SCROLLER">
       <object>objects\obj_house</object>
@@ -246,6 +249,8 @@
     <object>objects\obj_global_vars</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_intro_heaven</room>
+    <room>rooms\rm_intro_hell</room>
     <room>rooms\rm_0</room>
     <room>rooms\rm_start</room>
     <room>rooms\rm_dark</room>
