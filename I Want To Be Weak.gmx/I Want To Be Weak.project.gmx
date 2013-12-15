@@ -3,11 +3,11 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="2" name="datafiles">
+  <datafiles number="10" name="datafiles">
     <datafile>
-      <name>text_engine_test_final.txt</name>
+      <name>Ganon.txt</name>
       <exists>-1</exists>
-      <size>1870</size>
+      <size>478</size>
       <exportAction>2</exportAction>
       <exportDir></exportDir>
       <overwrite>0</overwrite>
@@ -22,9 +22,94 @@
       <filename></filename>
     </datafile>
     <datafile>
-      <name>Textbox Engine V5 CMD Reference.txt</name>
+      <name>heaven_npc2.txt</name>
       <exists>-1</exists>
-      <size>6599</size>
+      <size>100</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename></filename>
+    </datafile>
+    <datafile>
+      <name>heaven_npc1.txt</name>
+      <exists>-1</exists>
+      <size>131</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename></filename>
+    </datafile>
+    <datafile>
+      <name>intro2.txt</name>
+      <exists>-1</exists>
+      <size>126</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename></filename>
+    </datafile>
+    <datafile>
+      <name>intro1.txt</name>
+      <exists>-1</exists>
+      <size>581</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename></filename>
+    </datafile>
+    <datafile>
+      <name>intro3.txt</name>
+      <exists>-1</exists>
+      <size>53</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename></filename>
+    </datafile>
+    <datafile>
+      <name>Zeus.txt</name>
+      <exists>-1</exists>
+      <size>606</size>
       <exportAction>2</exportAction>
       <exportDir></exportDir>
       <overwrite>0</overwrite>
@@ -85,7 +170,7 @@
       <sprites name="Environment">
         <sprite>sprites\spr_mountain_closed_door</sprite>
         <sprite>sprites\spr_sky</sprite>
-        <sprite>sprites\spr_mountain_door</sprite>
+        <sprite>sprites\spr_door</sprite>
         <sprite>sprites\spr_mountain</sprite>
         <sprite>sprites\spr_path_curve</sprite>
         <sprite>sprites\spr_path_line</sprite>
@@ -97,6 +182,8 @@
         <sprite>sprites\spr_house</sprite>
         <sprite>sprites\spr_housedst</sprite>
         <sprite>sprites\spr_dirt</sprite>
+        <sprite>sprites\spr_bed</sprite>
+        <sprite>sprites\spr_bed_empty</sprite>
       </sprites>
       <sprites name="NPC">
         <sprite>sprites\spr_zeus</sprite>
@@ -121,6 +208,7 @@
           <sprite>sprites\spr_e01_still_back</sprite>
           <sprite>sprites\spr_e01_still_front</sprite>
         </sprites>
+        <sprite>sprites\spr_heaven_npc</sprite>
       </sprites>
     </sprites>
     <sprites name="SIDE SCROLLER">
@@ -133,6 +221,9 @@
       <sprite>sprites\sprt_water</sprite>
       <sprite>sprites\spr_stairs</sprite>
       <sprite>sprites\spr_enemyShot</sprite>
+      <sprite>sprites\spr_background</sprite>
+      <sprite>sprites\spr_torch</sprite>
+      <sprite>sprites\spr_torch_light</sprite>
     </sprites>
     <sprite>sprites\spr_inventoryIcon</sprite>
     <sprite>sprites\spr_hpIcon</sprite>
@@ -147,13 +238,14 @@
       <sprite>sprites\spr_textbox_questionbox</sprite>
       <sprite>sprites\spr_textbox_questionbox_cursor</sprite>
     </sprites>
-    <sprite>sprites\spr_collisionblock</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_grass</background>
     <background>background\bg_heaven</background>
     <background>background\bg_mountain</background>
     <background>background\bg_cave</background>
+    <background>background\bg_intro_heaven</background>
+    <background>background\bg_intro_hell</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -172,9 +264,9 @@
     <scripts name="SIDE SCROLLER">
       <script>scripts\InitlializePlayer.gml</script>
       <script>scripts\playerCollison.gml</script>
-      <script>scripts\objectCollision.gml</script>
       <script>scripts\createCollisionObjects.gml</script>
       <script>scripts\destroyCollisionObjects.gml</script>
+      <script>scripts\objectCollision.gml</script>
     </scripts>
     <scripts name="Textbox">
       <script>scripts\textbox_cmd_delete.gml</script>
@@ -211,6 +303,7 @@
         <object>objects\par_unbreakable</object>
         <object>objects\par_wall</object>
         <object>objects\obj_box</object>
+        <object>objects\par_textbox</object>
       </objects>
       <objects name="Characters">
         <object>objects\obj_v01</object>
@@ -218,6 +311,7 @@
         <object>objects\obj_player</object>
         <object>objects\obj_gridy_human</object>
         <object>objects\obj_zeus</object>
+        <object>objects\obj_heaven_npc</object>
       </objects>
       <objects name="Environment">
         <object>objects\obj_mountain</object>
@@ -232,6 +326,8 @@
         <object>objects\obj_dirt</object>
       </objects>
       <object>objects\span_player</object>
+      <object>objects\obj_bed</object>
+      <object>objects\obj_control</object>
     </objects>
     <objects name="SIDE SCROLLER">
       <object>objects\obj_house</object>
@@ -251,16 +347,25 @@
       </objects>
       <object>objects\obj_caveExit</object>
       <object>objects\obj_ammoPickup</object>
+      <object>objects\obj_torch</object>
+      <object>objects\obj_background</object>
+      <object>objects\obj_door</object>
     </objects>
     <object>objects\obj_textbox</object>
+    <object>objects\obj_global</object>
+    <object>objects\obj_global_vars</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_SSPrototype1</room>
-    <room>rooms\rm_platformsTest</room>
-    <room>rooms\rm_start</room>
     <room>rooms\rm_SSPrototype2</room>
     <room>rooms\rm_0</room>
+    <room>rooms\rm_father</room>
+    <room>rooms\rm_intro_heaven</room>
+    <room>rooms\rm_intro_hell</room>
+    <room>rooms\rm_start</room>
+    <room>rooms\rm_dark</room>
+    <room>rooms\rm_SSPrototype1</room>
     <room>rooms\rm_01</room>
+    <room>rooms\rm_platformsTest</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
