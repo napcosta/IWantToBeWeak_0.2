@@ -7,6 +7,8 @@ damageMultiplier = argument1; // when stronger(almost god) has a higher multipli
 selfDamage = 15* argument1 - 15; //when stronger also inflicts self dmg
 damage = 10 * damageMultiplier;
 fallCounter = 0;
+collisionArea = true;
+dir = 1;
 
 grounded = true;
 onStairs = false;

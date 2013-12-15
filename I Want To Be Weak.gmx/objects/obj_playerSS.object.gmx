@@ -49,6 +49,46 @@
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>601</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>9</kind>
+            <script>createCollisionObjects</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="2" enumb="1">
       <action>
@@ -223,71 +263,12 @@ if (alarm[1] &lt; 0 and MouseButton) {
     }
     else if obj_inventory.dirtBlocks&gt;0 and
                 obj_inventory.inventoryList[selected] == "Dirt"{
-            //drops a dirt block
-            inRange = false;
-            offset =0;
-            offsety=0;
-            if (abs(mouse_x-obj_playerSS.x)&lt;50 and abs(mouse_y-obj_playerSS.y)&lt;50)
-                inRange = true;
-            
-            difx = mouse_x-obj_playerSS.x;
-            dify = mouse_y-obj_playerSS.y;
-                //place left            
-            if ((-60 &lt;difx)and(difx&lt;= -10) and (-10 &lt;dify)and(dify&lt; 10)) { offset=-44; offsety=0;}
-                //place left-Up
-            if (-60 &lt;difx)and(difx&lt;= -10) and (-60 &lt;dify)and(dify&lt;= -10) { offset=-44; offsety=-44;}
-                //place up
-            if (-10 &lt;difx)and(difx&lt; 10) and (-60 &lt;dify)and(dify&lt;= -10) { offset=0; offsety=-44;}
-                //place right-Up
-            if (10 &lt;=difx)and(difx&lt; 60) and (-60 &lt;dify)and(dify&lt;= -10) { offset=44; offsety=-44;}
-                //place right
-            if (10 &lt;=difx)and(difx&lt; 60) and (-10 &lt;dify)and(dify&lt; 10) { offset=44; offsety=0;}
-                //place right-Down
-            if (10 &lt;=difx)and(difx&lt; 60) and (10 &lt;=dify)and(dify&lt; 60) { offset=44; offsety=44;}
-                //place down
-            if (-10 &lt;difx)and(difx&lt; 10) and (10 &lt;=dify)and(dify&lt; 60) { offset=0; offsety=44;}
-                //place left-Down
-            if (-60 &lt;difx)and(difx&lt;= -10) and (10 &lt;=dify)and(dify&lt; 60) { offset=-44; offsety=44;}
-
-
-            checkOffset = sign(offset);
-            checkOffsety = sign(offsety);
-            if (-10 &lt; difx) and (difx &lt; 10)
-                checkOffset=0;
-            if (-10 &lt; dify) and (dify &lt; 10)
-                checkOffsety=0;
-            show_debug_message(string(checkOffset));
-            show_debug_message(string(checkOffsety));
-            
-            if (inRange and place_empty(x+checkOffset*32,y+checkOffsety*32-3)) {
-                dirtID = instance_create(x+offset-14,y+offsety-4,obj_dirt);
-    
-                with (dirtID) {
-                    move_snap(32,32);
-                }
-                obj_inventory.dirtBlocks--;
-                
-                if obj_inventory.dirtBlocks == 0
-                    obj_inventory.wait = selected;
-            }
-            /*offset=sign(mouse_x - obj_playerSS.x);
-            if ( place_empty(x+offset*32,y-3)) {
-                dirtID = instance_create(x+offset*44-14,y-3,obj_dirt);//-58; 30
-    
-                with (dirtID) {
-                    move_snap(32,32);
-                }
-                obj_inventory.dirtBlocks--;
-                
-                if obj_inventory.dirtBlocks == 0
-                    obj_inventory.wait = selected;
-            }*/
     }
     else if obj_inventory.stairBlocks&gt;0 and
                 obj_inventory.inventoryList[selected] == "Stair" {
             //drops a stair block
-            if !(place_meeting(x,y,all) ) {
-                stairID = instance_create(x-5,y-4,obj_stair);
+            if !place_meeting(x,y,par_wall) and !place_meeting(x,y,obj_stair) {
+                stairID = instance_create(x-4,y-5,obj_stair);
     
                 with (stairID) {
                     move_snap(32,32);
@@ -384,6 +365,46 @@ if (alarm[1] &lt; 0 and MouseButton) {
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>601</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>9</kind>
+            <script>objectCollision</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+        </arguments>
       </action>
     </event>
     <event eventtype="4" ename="obj_stair">
