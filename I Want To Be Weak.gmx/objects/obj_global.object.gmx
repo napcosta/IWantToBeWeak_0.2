@@ -25,19 +25,23 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>obj = instance_nearest(x,y, obj_torch);
-
-if(obj_torch.light_on &amp;&amp; distance_to_object(obj) &lt; 600 &amp;&amp; !collision_line(x+16, y+16, obj.x, obj.y, obj_wall, 1 ,1)) {
-    temp_alpha = distance_to_object(obj)/600;
+            <string>if(instance_exists(obj_torch) &amp;&amp; instance_exists(obj_global_vars)) {
+    obj = instance_nearest(x,y, obj_torch);
+    
+    if(obj_torch.light_on &amp;&amp; distance_to_object(obj) &lt; 600 &amp;&amp; !collision_line(x+16, y+16, obj.x, obj.y, obj_wall, 1 ,1)) {
+        temp_alpha = distance_to_object(obj)/600;
+    } else {
+        temp_alpha = 1;
+    }
+    
+    alpha2 = 1;
+    
+    if (temp_alpha &lt; alpha2)
+        alpha2 = temp_alpha;
 } else {
-    temp_alpha = 1;
+    alpha2 = 0;
 }
 
-alpha2 = 1;
-
-if (temp_alpha &lt; alpha2)
-    alpha2 = temp_alpha;
-    
 {
     draw_sprite(sprite_index, image_index, x,y);
     draw_sprite_ext(sprite_index, image_index, x,y, image_xscale, image_yscale, image_angle, c_black, alpha2);
