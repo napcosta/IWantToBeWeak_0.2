@@ -238,6 +238,7 @@
       <sprite>sprites\spr_textbox_questionbox</sprite>
       <sprite>sprites\spr_textbox_questionbox_cursor</sprite>
     </sprites>
+    <sprite>sprites\spr_portal</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_grass</background>
@@ -325,6 +326,7 @@
       <object>objects\span_player</object>
       <object>objects\obj_bed</object>
       <object>objects\obj_control</object>
+      <object>objects\obj_portal</object>
     </objects>
     <objects name="SIDE SCROLLER">
       <object>objects\obj_house</object>
@@ -352,8 +354,8 @@
     <object>objects\obj_global_vars</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_SSPrototype2</room>
     <room>rooms\rm_0</room>
+    <room>rooms\rm_SSPrototype2</room>
     <room>rooms\rm_father</room>
     <room>rooms\rm_intro_heaven</room>
     <room>rooms\rm_intro_hell</room>

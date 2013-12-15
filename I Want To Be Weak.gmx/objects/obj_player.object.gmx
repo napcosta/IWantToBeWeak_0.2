@@ -57,6 +57,9 @@ can_enter = false;
 RIGHT = 0;
 LEFT = 1;
 last_move = RIGHT;
+
+if(room == rm_01)
+    is_vulnerable = true;
 </string>
           </argument>
         </arguments>

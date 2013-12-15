@@ -147,7 +147,7 @@ else move_to_player = true;
           </argument>
           <argument>
             <kind>0</kind>
-            <string>1</string>
+            <string>0.5</string>
           </argument>
         </arguments>
       </action>
