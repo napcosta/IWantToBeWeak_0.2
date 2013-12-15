@@ -6,7 +6,7 @@
   <vsnap>32</vsnap>
   <hsnap>32</hsnap>
   <isometric>0</isometric>
-  <speed>30</speed>
+  <speed>60</speed>
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
@@ -90,7 +90,7 @@
     <instance objName="obj_cloud" x="-32" y="64" name="inst_71A5AA53" locked="0" code="" scaleX="0.827585995197296" scaleY="0.727272987365723" colour="4294967295" rotation="0"/>
     <instance objName="obj_cloud" x="-32" y="32" name="inst_320CA53C" locked="0" code="" scaleX="0.827585995197296" scaleY="0.727272987365723" colour="4294967295" rotation="0"/>
     <instance objName="obj_change_room" x="0" y="224" name="inst_363CFC92" locked="0" code="goto_room = rm_dark;&#xA;obj_global_vars.last_room = rm_father;" scaleX="1" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="obj_zeus" x="448" y="256" name="inst_6355D731" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_zeus" x="448" y="256" name="inst_6355D731" locked="0" code="filename = &quot;Zeus.txt&quot;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_cloud" x="288" y="416" name="inst_BD757F04" locked="0" code="" scaleX="0.827585995197296" scaleY="0.727272987365723" colour="4294967295" rotation="0"/>
     <instance objName="obj_cloud" x="224" y="416" name="inst_9709A97B" locked="0" code="" scaleX="0.827585995197296" scaleY="0.727272987365723" colour="4294967295" rotation="0"/>
     <instance objName="obj_player" x="64" y="256" name="inst_37181394" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

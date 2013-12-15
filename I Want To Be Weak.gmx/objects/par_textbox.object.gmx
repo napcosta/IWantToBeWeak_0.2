@@ -4,36 +4,10 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>last_room = rm_0;
-light_on = false;
-
-player_is_moving = true;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -51,8 +25,23 @@ player_is_moving = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(!instance_exists(obj_textbox))
-    player_is_moving = true;
+            <string>area_arround = 40;
+
+if(place_meeting(x + area_arround,y,obj_player) || 
+    place_meeting(x - area_arround,y,obj_player) || 
+    place_meeting(x,y + area_arround,obj_player) || 
+    place_meeting(x,y - area_arround,obj_player) ||
+    place_meeting(x + area_arround,y + area_arround,obj_player) ||
+    place_meeting(x + area_arround,y - area_arround,obj_player) ||
+    place_meeting(x - area_arround,y + area_arround,obj_player) ||
+    place_meeting(x - area_arround,y - area_arround,obj_player)) {
+        
+        if(mouse_check_button_pressed(mb_right)&amp;&amp; !instance_exists(obj_textbox)){
+            textbox = instance_create(x,y, obj_textbox);
+            textbox.file_name = filename;
+            obj_global_vars.player_is_moving = false;
+        }
+}
 </string>
           </argument>
         </arguments>
