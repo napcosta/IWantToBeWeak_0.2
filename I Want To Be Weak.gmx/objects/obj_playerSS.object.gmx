@@ -249,17 +249,59 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>MouseButton = mouse_check_button_pressed(mb_left);
+            <string>
+//buttons for quick access and debug
+giveHealth = keyboard_check_pressed(ord('U'));
+giveBigFireball = keyboard_check_pressed(ord('I'));
+giveSmallFireball = keyboard_check_pressed(ord('O'));
+takeItAway = keyboard_check_pressed(ord('P'));
+
+if giveHealth
+    health = 100;
+
+if giveBigFireball {
+    obj_inventory.hasBigFireball = true;
+    obj_inventory.hasSmallFireball = false;
+    obj_inventory.hasSlingshot = false;
+} else if giveSmallFireball {
+    obj_inventory.hasBigFireball = false;
+    obj_inventory.hasSmallFireball = true;
+    obj_inventory.hasSlingshot = false;
+} else if takeItAway {
+    obj_inventory.hasBigFireball = false;
+    obj_inventory.hasSmallFireball = false;
+    obj_inventory.hasSlingshot = true;
+    obj_inventory.ammo = 100;
+    obj_inventory.dirtBlocks = 100;
+}
+
+MouseButton = mouse_check_button_pressed(mb_left);
 
 if (alarm[1] &lt; 0 and MouseButton) {
 //    alarm[1] = 10;
     //shoots
-    if obj_inventory.ammo&gt;0 and obj_inventory.inventoryList[selected] == "Slingshot" {
+    if (obj_inventory.ammo&gt;0 and obj_inventory.inventoryList[selected] == "Weapon" and obj_inventory.hasSlingshot){
         instance_create(obj_playerSS.x, obj_playerSS.y, obj_shot);
         obj_inventory.ammo--;
         
         if obj_inventory.ammo == 0
                     obj_inventory.wait = selected;
+    }
+    else if (obj_inventory.hasBigFireball and obj_inventory.inventoryList[selected] == "Weapon")
+    {
+        fireball = instance_create(obj_playerSS.x, obj_playerSS.y-90, obj_fireball);
+        with(fireball)
+        {
+            move_towards_point(mouse_x, mouse_y, 8);
+        }
+    }
+    else if (obj_inventory.hasSmallFireball and obj_inventory.inventoryList[selected] == "Weapon")
+    {
+        fireball = instance_create(obj_playerSS.x, obj_playerSS.y, obj_fireball);
+        with(fireball)
+        {
+            move_towards_point(mouse_x, mouse_y, 8);
+        }
     }
     else if obj_inventory.dirtBlocks&gt;0 and
                 obj_inventory.inventoryList[selected] == "Dirt"{

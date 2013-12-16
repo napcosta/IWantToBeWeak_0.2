@@ -24,8 +24,39 @@ if (argument4<1 or argument4>10)
     basicResistance = 1; //enemy shots, stairs
 else
     basicResistance = argument4;
+    
+destroy_list = circular_collision(x,y, explosionRadius, all, false, true);
+if destroy_list !=noone
+{
 
-//explosion calculation
-if place_meeting(x,y,other)
-if place_meeting(x,y,obj_enemyShot) or place_meeting(x,y,obj_stair)
-    h=0;
+for (i=0; i<ds_list_size(destroy_list); i++) {
+    if(destroys<=0)
+    {
+    instance_destroy();
+    break;
+    }
+    something = ds_list_find_value(destroy_list,i);
+    show_debug_message("something =" + object_get_name(something.object_index));
+    with(something) {
+        if(object_get_name(something.object_index)=="obj_playerSS" or object_get_name(something.object_index)=="obj_collisionTest")
+        {
+            continue;
+        }
+        else if(object_get_name(something.object_index)=="obj_wall")
+        {
+            destroys -= wallResistance;
+            instance_destroy();
+        }
+        else if(object_get_name(something.object_index)=="obj_dirt" or object_get_name(something.object_index)=="obj_enemy")
+        {
+            destroys -= enemyDirtResistance;
+            instance_destroy();
+        }
+        else
+        {
+            destroys -= basicResistance;
+            instance_destroy();
+        }
+    }
+}
+}

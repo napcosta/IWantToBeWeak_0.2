@@ -24,7 +24,9 @@ if Key_CycleInvRight {
     }
 }
 
-if ((hasSlingshot && ammo>0 && inventoryList[selected] == "Slingshot")
+if ((hasSlingshot && ammo>0 && inventoryList[selected] == "Weapon")
+        or (hasBigFireball && inventoryList[selected] == "Weapon")
+        or (hasSmallFireball && inventoryList[selected] == "Weapon")
         or (hasShovel && inventoryList[selected] == "Shovel")
         or (dirtBlocks>0 && inventoryList[selected] == "Dirt")
         or (stairBlocks>0 && inventoryList[selected] == "Stair")

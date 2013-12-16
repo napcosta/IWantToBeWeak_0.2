@@ -228,6 +228,9 @@
       <sprite>sprites\spr_torch</sprite>
       <sprite>sprites\spr_torch_light</sprite>
       <sprite>sprites\spr_lava</sprite>
+      <sprite>sprites\spr_caveTree</sprite>
+      <sprite>sprites\spr_bunnie</sprite>
+      <sprite>sprites\spr_mouse</sprite>
     </sprites>
     <sprite>sprites\spr_caveExit</sprite>
     <sprite>sprites\spr_ammoPickup</sprite>
@@ -240,7 +243,7 @@
       <sprite>sprites\spr_textbox_questionbox</sprite>
       <sprite>sprites\spr_textbox_questionbox_cursor</sprite>
     </sprites>
-	<sprites name="Sprite Icons">
+    <sprites name="Sprite Icons">
       <sprite>sprites\spr_inventoryIcon</sprite>
       <sprite>sprites\spr_hpIcon</sprite>
       <sprite>sprites\spr_collisionblock</sprite>
@@ -255,7 +258,9 @@
     <background>background\bg_intro_heaven</background>
     <background>background\bg_intro_hell</background>
   </backgrounds>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\path0</path>
+  </paths>
   <scripts name="scripts">
     <scripts name="Inventory">
       <script>scripts\cycleInventory.gml</script>
@@ -292,7 +297,7 @@
       <script>scripts\textbox_voice_play.gml</script>
     </scripts>
     <script>scripts\circular_collision.gml</script>
-	<script>scripts\calcExplosion.gml</script>
+    <script>scripts\calcExplosion.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_pixel</font>
@@ -341,14 +346,9 @@
       <object>objects\obj_portal</object>
     </objects>
     <objects name="SIDE SCROLLER">
-      <object>objects\obj_house</object>
-      <object>objects\obj_water</object>
-      <object>objects\obj_stair</object>
-      <object>objects\obj_inventory</object>
-      <object>objects\obj_hostage</object>
       <objects name="Player">
-        <object>objects\obj_playerHealth</object>
         <object>objects\obj_playerSS</object>
+        <object>objects\obj_playerHealth</object>
         <object>objects\obj_shot</object>
         <object>objects\obj_collisionTest</object>
       </objects>
@@ -358,22 +358,31 @@
       </objects>
       <object>objects\obj_caveExit</object>
       <object>objects\obj_ammoPickup</object>
-      <object>objects\obj_torch</object>
-      <object>objects\obj_background</object>
-      <object>objects\obj_door</object>
-      <object>objects\obj_lava</object>
+      <objects name="environment">
+        <object>objects\obj_lava</object>
+        <object>objects\obj_door</object>
+        <object>objects\obj_background</object>
+        <object>objects\obj_torch</object>
+        <object>objects\obj_hostage</object>
+        <object>objects\obj_inventory</object>
+        <object>objects\obj_stair</object>
+        <object>objects\obj_water</object>
+        <object>objects\obj_house</object>
+        <object>objects\obj_animals</object>
+      </objects>
     </objects>
     <object>objects\obj_textbox</object>
     <object>objects\obj_global</object>
     <object>objects\obj_global_vars</object>
-	<object>objects\obj_ChangeRoom01</object>
+    <object>objects\obj_ChangeRoom01</object>
     <object>objects\obj_ChangeRoomProto2</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_Dungeon1</room>
+    <room>rooms\rm_SSPrototype2</room>
+    <room>rooms\rm_intro_heaven</room>
     <room>rooms\rm_01</room>
     <room>rooms\rm_0</room>
-    <room>rooms\rm_intro_heaven</room>
-    <room>rooms\rm_SSPrototype2</room>
     <room>rooms\rm_father</room>
     <room>rooms\rm_intro_hell</room>
     <room>rooms\rm_start</room>

@@ -48,7 +48,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>obj_player.health -= 15;
+            <string>health -= 15;
 </string>
           </argument>
         </arguments>
