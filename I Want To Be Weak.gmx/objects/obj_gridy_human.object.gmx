@@ -51,11 +51,25 @@
             <string>if (instance_exists(obj_textbox))
     has_spoke = true;
 
-if (has_spoke &amp;&amp; !instance_exists(obj_textbox))
+if (has_spoke &amp;&amp; !instance_exists(obj_textbox) &amp;&amp; !obj_player.has_map)
     instance_create(x,y+100, obj_scroll);
 </string>
           </argument>
         </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>604</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_inherited</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
   </events>

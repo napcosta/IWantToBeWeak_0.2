@@ -48,6 +48,8 @@ fireball_scale = 0.15;
 is_isometric_view = true;
 is_moving = true;
 
+fireball_radius = 150;
+
 //side scroll variables
 vsp = 0;
 hsp = 0;
@@ -423,6 +425,7 @@ direction_y = direction_y / length;
 
 if(mouse_check_button(mb_left) &amp;&amp; can_fireball) {
     fireball = instance_create(x,y, obj_fireball);
+    fireball.radius = fireball_radius;
     fireball.image_xscale = fireball_scale;
     fireball.image_yscale = fireball_scale;
     fireball.hspeed = direction_x*fireball_speed;
@@ -553,6 +556,7 @@ if(mouse_check_button(mb_left) &amp;&amp; can_fireball) {
             <kind>1</kind>
             <string>fireball_scale = 0.05;
 has_map = true;
+fireball_radius = 60;
 
 instance_create(200, 380, obj_e01);
 instance_create(550, 380, obj_e01);

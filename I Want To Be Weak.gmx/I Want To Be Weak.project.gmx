@@ -286,6 +286,7 @@
       <script>scripts\textbox_var_set.gml</script>
       <script>scripts\textbox_voice_play.gml</script>
     </scripts>
+    <script>scripts\circular_collision.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_pixel</font>
@@ -361,15 +362,15 @@
     <object>objects\obj_global_vars</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_01</room>
     <room>rooms\rm_0</room>
+    <room>rooms\rm_intro_heaven</room>
     <room>rooms\rm_SSPrototype2</room>
     <room>rooms\rm_father</room>
-    <room>rooms\rm_intro_heaven</room>
     <room>rooms\rm_intro_hell</room>
     <room>rooms\rm_start</room>
     <room>rooms\rm_dark</room>
     <room>rooms\rm_SSPrototype1</room>
-    <room>rooms\rm_01</room>
     <room>rooms\rm_platformsTest</room>
   </rooms>
   <help>

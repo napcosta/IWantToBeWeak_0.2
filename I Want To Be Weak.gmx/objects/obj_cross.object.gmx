@@ -193,11 +193,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(obj_player.has_map){
-    sprite_index = spr_mountain_door;
+            <string>
+    sprite_index = spr_door;
     visible = true;
     always_visible = true;
-}
+
 </string>
           </argument>
         </arguments>
