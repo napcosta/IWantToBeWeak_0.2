@@ -320,6 +320,7 @@
         <object>objects\obj_e01</object>
         <object>objects\obj_player</object>
         <object>objects\obj_gridy_human</object>
+        <object>objects\obj_powerfull</object>
         <object>objects\obj_zeus</object>
         <object>objects\obj_heaven_npc</object>
       </objects>
@@ -370,8 +371,9 @@
     <object>objects\obj_ChangeRoomProto2</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_intro_heaven</room>
     <room>rooms\rm_01</room>
+    <room>rooms\room10</room>
+    <room>rooms\rm_intro_heaven</room>
     <room>rooms\rm_0</room>
     <room>rooms\rm_SSPrototype2</room>
     <room>rooms\rm_father</room>
