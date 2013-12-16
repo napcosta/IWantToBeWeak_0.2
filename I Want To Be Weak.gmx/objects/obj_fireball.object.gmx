@@ -74,6 +74,47 @@ explosion_scale = 1.5;
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="obj_e01">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>destroy_list = circular_collision(x,y, radius, par_can_die, true, true);
+
+if(destroy_list != noone) {    
+    for (i=0; i &lt; ds_list_size(destroy_list); i++) {
+        something = ds_list_find_value(destroy_list,i);
+        with(something) {
+            instance_destroy();
+        }
+    }
+    
+    sprite_index = spr_bomb;
+    hspeed = 0;
+    vspeed = 0;
+    image_speed = 0.5;
+    image_xscale = explosion_scale;
+    image_yscale = explosion_scale;
+    
+    alarm[0] = 60;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="4" ename="par_can_die">
       <action>
         <libid>1</libid>
