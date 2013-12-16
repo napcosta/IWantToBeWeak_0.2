@@ -41,7 +41,7 @@ key_left=vk_left; //for easy porting to other systems in GM:S
 key_right=vk_right;
 key_up=vk_up;
 key_down=vk_down;
-key_advance=vk_enter;
+key_advance=mb_right;
 keycheck_left=keyboard_check_pressed(key_left); //for easy porting to other systems in GM:S
 keycheck_right=keyboard_check_pressed(key_right);
 keycheck_up=keyboard_check_pressed(key_up);
@@ -686,53 +686,7 @@ surface_reset_target();
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>var i, i2;
-
-if (current_text&gt;-1) //checks if the alarm "create event" has been completed
-{
-  //drawing cut-ins first so that the textbox can cover them
-  if (current_cutins&gt;0)
-  {
-    for (i=0; i&lt;current_cutins; i+=1) //repeats for every cut-in
-    {
-      for (i2=0; i2&lt;textbox_cutin_parts[i]; i2+=1) //draws each part individually
-      {
-        draw_sprite_ext(textbox_cutin_sprite[i,i2],textbox_cutin_anim_index[i,i2],textbox_cutin_x[i]+(textbox_cutin_part_x_offset[i,i2]*textbox_cutin_flipped[i]),textbox_cutin_y+textbox_cutin_part_y_offset[i,i2],textbox_cutin_flipped[i],1,0,$ffffff,textbox_cutin_alpha[i]);
-      }
-    }
-  }
-  if (!textbox_closing)
-  {
-    draw_surface_ext(textbox_surface,0,0,1,1,0,$ffffff,textbox_overall_alpha);
-    if (textbox_vnquestion_enabled)
-    {
-      draw_sprite_ext(textbox_vnquestion_cursor_sprite,textbox_vnquestion_cursor_anim_index,textbox_vnquestion_cursor_x,textbox_vnquestion_cursor_current_y+textbox_vnquestion_y_offset,1,1,0,$ffffff,textbox_vnquestion_cursor_alpha);
-    }
-  }
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="32">
+    <event eventtype="6" enumb="54">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -796,6 +750,52 @@ if (current_chr&gt;=string_length(edited_text[current_text]))
         sound_play(textbox_sound_close);
         textbox_closing=1;
       }
+    }
+  }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>var i, i2;
+
+if (current_text&gt;-1) //checks if the alarm "create event" has been completed
+{
+  //drawing cut-ins first so that the textbox can cover them
+  if (current_cutins&gt;0)
+  {
+    for (i=0; i&lt;current_cutins; i+=1) //repeats for every cut-in
+    {
+      for (i2=0; i2&lt;textbox_cutin_parts[i]; i2+=1) //draws each part individually
+      {
+        draw_sprite_ext(textbox_cutin_sprite[i,i2],textbox_cutin_anim_index[i,i2],textbox_cutin_x[i]+(textbox_cutin_part_x_offset[i,i2]*textbox_cutin_flipped[i]),textbox_cutin_y+textbox_cutin_part_y_offset[i,i2],textbox_cutin_flipped[i],1,0,$ffffff,textbox_cutin_alpha[i]);
+      }
+    }
+  }
+  if (!textbox_closing)
+  {
+    draw_surface_ext(textbox_surface,0,0,1,1,0,$ffffff,textbox_overall_alpha);
+    if (textbox_vnquestion_enabled)
+    {
+      draw_sprite_ext(textbox_vnquestion_cursor_sprite,textbox_vnquestion_cursor_anim_index,textbox_vnquestion_cursor_x,textbox_vnquestion_cursor_current_y+textbox_vnquestion_y_offset,1,1,0,$ffffff,textbox_vnquestion_cursor_alpha);
     }
   }
 }

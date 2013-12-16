@@ -50,6 +50,9 @@ is_moving = true;
 
 fireball_radius = 150;
 
+fireball_sprite = spr_bigFireball;
+fireball_explosion_scale = 1.5;
+
 //side scroll variables
 vsp = 0;
 hsp = 0;
@@ -426,10 +429,10 @@ direction_y = direction_y / length;
 if(mouse_check_button(mb_left) &amp;&amp; can_fireball) {
     fireball = instance_create(x,y, obj_fireball);
     fireball.radius = fireball_radius;
-    fireball.image_xscale = fireball_scale;
-    fireball.image_yscale = fireball_scale;
     fireball.hspeed = direction_x*fireball_speed;
     fireball.vspeed = direction_y*fireball_speed;
+    fireball.sprite_index = fireball_sprite;
+    fireball.explosion_scale = fireball_explosion_scale;
     can_fireball = false;
     alarm[0] = 20;
 }
@@ -557,6 +560,9 @@ if(mouse_check_button(mb_left) &amp;&amp; can_fireball) {
             <string>fireball_scale = 0.05;
 has_map = true;
 fireball_radius = 60;
+
+fireball_sprite = spr_smallFireball;
+fireball_explosion_scale = 0.75;
 
 instance_create(200, 380, obj_e01);
 instance_create(550, 380, obj_e01);
