@@ -259,12 +259,8 @@ if(room == rm_01)
     
         current_velocity_x = 10 * direction_x;
         current_velocity_y = 10 * direction_y;
-        health -= 25;
+        health -= 20;
     }
-    
-    show_debug_message("------------------");
-    show_debug_message(string(current_velocity_x));
-    show_debug_message(string(current_velocity_y));
     
     if(is_moving) {
         x += current_velocity_x;
