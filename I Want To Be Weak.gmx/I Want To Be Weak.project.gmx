@@ -138,6 +138,8 @@
   </sounds>
   <sprites name="sprites">
     <sprites name="Inventory">
+      <sprite>sprites\spr_invBigFireball</sprite>
+      <sprite>sprites\spr_invSmallFireball</sprite>
       <sprite>sprites\spr_invSlingshot</sprite>
       <sprite>sprites\spr_invNoSlingshot</sprite>
       <sprite>sprites\spr_invShovel</sprite>
@@ -160,7 +162,8 @@
         <sprite>sprites\spr_still_left</sprite>
         <sprite>sprites\spr_still_right</sprite>
       </sprites>
-      <sprite>sprites\sp_fireball</sprite>
+      <sprite>sprites\spr_bigFireball</sprite>
+      <sprite>sprites\spr_smallFireball</sprite>
       <sprite>sprites\spr_warp</sprite>
       <sprite>sprites\spr_food</sprite>
       <sprite>sprites\spr_bomb</sprite>
@@ -224,11 +227,8 @@
       <sprite>sprites\spr_background</sprite>
       <sprite>sprites\spr_torch</sprite>
       <sprite>sprites\spr_torch_light</sprite>
-      <sprite>sprites\spr_collisionblock</sprite>
       <sprite>sprites\spr_lava</sprite>
     </sprites>
-    <sprite>sprites\spr_inventoryIcon</sprite>
-    <sprite>sprites\spr_hpIcon</sprite>
     <sprite>sprites\spr_caveExit</sprite>
     <sprite>sprites\spr_ammoPickup</sprite>
     <sprites name="Textbox">
@@ -239,6 +239,11 @@
       <sprite>sprites\spr_textbox_namebox</sprite>
       <sprite>sprites\spr_textbox_questionbox</sprite>
       <sprite>sprites\spr_textbox_questionbox_cursor</sprite>
+    </sprites>
+	<sprites name="Sprite Icons">
+      <sprite>sprites\spr_inventoryIcon</sprite>
+      <sprite>sprites\spr_hpIcon</sprite>
+      <sprite>sprites\spr_collisionblock</sprite>
     </sprites>
     <sprite>sprites\spr_portal</sprite>
   </sprites>
@@ -287,6 +292,7 @@
       <script>scripts\textbox_voice_play.gml</script>
     </scripts>
     <script>scripts\circular_collision.gml</script>
+	<script>scripts\calcExplosion.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_pixel</font>
@@ -360,6 +366,8 @@
     <object>objects\obj_textbox</object>
     <object>objects\obj_global</object>
     <object>objects\obj_global_vars</object>
+	<object>objects\obj_ChangeRoom01</object>
+    <object>objects\obj_ChangeRoomProto2</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_01</room>

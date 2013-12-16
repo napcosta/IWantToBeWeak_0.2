@@ -285,6 +285,8 @@ if place_meeting(x, y+vsp ,par_wall)
 y += vsp;
 //enemy turns to player
 self.image_xscale = sign(self.x-obj_playerSS.x);
+if (self.image_xscale == 0)
+    self.image_xscale = 1;
 
 //enemy gets red when looses HP
 if alarm[2] &gt; 0

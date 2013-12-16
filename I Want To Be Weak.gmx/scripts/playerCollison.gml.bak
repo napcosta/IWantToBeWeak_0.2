@@ -14,11 +14,10 @@ if place_meeting(x, y, obj_enemyShot) {
     with (thisShot)
         instance_destroy();
 }
-//collision with lava
-if (place_meeting(x,y,obj_lava))
+if(place_meeting(x,y,obj_lava))
 {
        hsp += 2* (self.x - obj_lava.x);
-       health = 0;
+       health -= 30;
 }
 
 //collisions with walls

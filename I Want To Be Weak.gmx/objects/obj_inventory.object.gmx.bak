@@ -142,40 +142,33 @@ draw_text(55,24,stairBlocks);*/
 
 
 //visual mode
-if hasBigFireball { //very strong
-    draw_sprite(spr_invBigFireball,0,0,0);
-} else if hasSmallFireball
-    { //less strong
-        draw_sprite(spr_invSmallFireball,0,0,0);
-    }
-    else {//human-like
-        if hasSlingshot {
-            draw_sprite(spr_invSlingshot,0,0,0);
-            draw_text(0,37,ammo);
-        }
-        else
-            draw_sprite(spr_invNoSlingshot,0,0,0);
-
-        if hasShovel
-            draw_sprite(spr_invShovel,0,37,0);
-        else
-            draw_sprite(spr_invNoShovel,0,37,0);
-
-        if dirtBlocks&gt;0 {
-            draw_sprite(spr_invDirt,0,74,0);
-            draw_text(74,37,dirtBlocks);
-        }
-        else
-            draw_sprite(spr_invNoDirt,0,74,0);
-
-        if stairBlocks&gt;0 {
-            draw_sprite(spr_invStair,0,111,0);
-            draw_text(111,37,stairBlocks);
-        }
-        else
-            draw_sprite(spr_invNoStair,0,111,0);
+if hasSlingshot {
+    draw_sprite(spr_invSlingshot,0,0,0);
+    draw_text(0,37,ammo);
 }
-//selected item is highlighted
+else
+    draw_sprite(spr_invNoSlingshot,0,0,0);
+
+if hasShovel
+    draw_sprite(spr_invShovel,0,37,0);
+else
+    draw_sprite(spr_invNoShovel,0,37,0);
+
+if dirtBlocks&gt;0 {
+    draw_sprite(spr_invDirt,0,74,0);
+    draw_text(74,37,dirtBlocks);
+}
+else
+    draw_sprite(spr_invNoDirt,0,74,0);
+
+if stairBlocks&gt;0 {
+    draw_sprite(spr_invStair,0,111,0);
+    draw_text(111,37,stairBlocks);
+}
+else
+    draw_sprite(spr_invNoStair,0,111,0);
+
+//selected item highlighted
 draw_sprite(spr_invSelected,0,37*selected,0);
 </string>
           </argument>

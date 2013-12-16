@@ -1,4 +1,6 @@
-health = 100+ argument0;
+if (health<=0 or health > 100)
+    health = 100+ argument0;
+
 vsp=0;
 hsp=0;
 grav=0.5;
