@@ -372,7 +372,7 @@
     <instance objName="obj_wall" x="416" y="1184" name="inst_87CF37D2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="448" y="1152" name="inst_1B4D6881" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="192" y="896" name="inst_0BA6E41B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_hostage" x="48" y="1294" name="inst_491F7199" locked="0" code="" scaleX="0.800000011920929" scaleY="0.600000023841858" colour="4294967295" rotation="0"/>
+    <instance objName="&lt;undefined&gt;" x="48" y="1294" name="inst_491F7199" locked="0" code="" scaleX="0.800000011920929" scaleY="0.600000023841858" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="224" y="1344" name="inst_CC94EEC4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="256" y="1312" name="inst_354A5291" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="288" y="1312" name="inst_8CD37E13" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -678,6 +678,7 @@
     <instance objName="obj_dirt" x="1184" y="1312" name="inst_F52BBC75" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="1152" y="1312" name="inst_D0D05218" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dirt" x="1184" y="1344" name="inst_D53606BD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_hostage" x="115" y="106" name="inst_E18DD9F5" locked="0" code="filename = &quot;hostage.txt&quot;;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_playerSS" x="30" y="108" name="inst_99EC84EB" locked="0" code="" scaleX="-1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
