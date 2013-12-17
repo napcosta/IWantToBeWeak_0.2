@@ -1,13 +1,11 @@
-stoneBlocks = 0; // not used
-
-hasBigFireball = false;
+hasBigFireball = true;
 hasSmallFireball = false;
 
-hasSlingshot = true;
-hasShovel = true;
-dirtBlocks = 10;
-stairBlocks = 15;
-ammo = 10;
+hasSlingshot = false;
+hasShovel = false;
+dirtBlocks = 0;
+stairBlocks = 0;
+ammo = 0;
 
 //selection ordered by tools, then blocks
 inventoryLimit = 4;

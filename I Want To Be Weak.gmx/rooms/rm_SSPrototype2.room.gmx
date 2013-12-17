@@ -55,7 +55,6 @@
     <instance objName="obj_lava" x="1152" y="1312" name="inst_EE26A449" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_lava" x="1184" y="1312" name="inst_04CFB3B4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_playerHealth" x="32" y="0" name="inst_49D74378" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_inventory" x="0" y="0" name="inst_F1638408" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="0" y="160" name="inst_E79563E0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="32" y="160" name="inst_69936041" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="64" y="160" name="inst_E5AC9DD7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

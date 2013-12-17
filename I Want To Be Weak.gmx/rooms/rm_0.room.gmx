@@ -175,6 +175,7 @@
     <instance objName="obj_heaven_npc" x="116" y="235" name="inst_9FC1237D" locked="0" code="filename = &quot;heaven_npc1.txt&quot;;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_heaven_npc" x="107" y="711" name="inst_D73152FA" locked="0" code="filename = &quot;heaven_npc2.txt&quot;;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_global_vars" x="14" y="18" name="inst_C16DD9BF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_inventory" x="727" y="110" name="inst_66CF6E25" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_textbox" x="1160" y="399" name="inst_A1C95673" locked="0" code="file_name = &quot;intro3.txt&quot;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
