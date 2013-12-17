@@ -51,7 +51,7 @@
             <string>if (instance_exists(obj_textbox))
     has_spoke = true;
 
-if (has_spoke &amp;&amp; !instance_exists(obj_textbox) &amp;&amp; obj_player.has_map)
+if (has_spoke &amp;&amp; !instance_exists(obj_textbox) &amp;&amp; !obj_player.has_map)
     instance_create(x,y+100, obj_scroll);
 </string>
           </argument>
