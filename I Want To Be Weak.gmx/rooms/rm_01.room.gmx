@@ -213,6 +213,7 @@
     <instance objName="obj_e01" x="955" y="607" name="inst_A32512C0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_e01" x="781" y="1311" name="inst_967716F8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_e01" x="956" y="1319" name="inst_5BAB2EFB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_global_vars" x="714" y="44" name="inst_57EDF63C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_player" x="302" y="758" name="inst_72A49308" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
