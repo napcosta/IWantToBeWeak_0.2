@@ -244,6 +244,24 @@ if(room == rm_01)
         current_velocity_y = 0;
     }
     
+    inst = instance_place(x, y, obj_e01);
+    
+    if (inst != noone) {
+        direction_x = x - inst.x;
+        direction_y = y - inst.y;
+        
+        length = sqrt(sqr(direction_x) + sqr(direction_y));
+        if (length == 0)
+            length = 0.00001;
+        
+        direction_x = direction_x / length;
+        direction_y = direction_y / length;
+    
+        current_velocity_x = 10 * direction_x;
+        current_velocity_y = 10 * direction_y;
+        health -= 20;
+    }
+    
     if(is_moving) {
         x += current_velocity_x;
         y += current_velocity_y;
@@ -261,6 +279,8 @@ if(room == rm_01)
         show_message("That's not how it ends...");
         game_restart();
     }
+    
+    
 }
 
 </string>
@@ -478,28 +498,6 @@ if(mouse_check_button(mb_left) &amp;&amp; can_fireball) {
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_e01">
-      <action>
-        <libid>1</libid>
-        <id>721</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_set_health</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>health - 10</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="4" ename="par_obstacle">
       <action>
         <libid>1</libid>
@@ -636,17 +634,24 @@ instance_create(550, 380, obj_e01);
       </action>
       <action>
         <libid>1</libid>
-        <id>331</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_restart_game</functionname>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>room_restart();
+</string>
+          </argument>
+        </arguments>
       </action>
       <action>
         <libid>1</libid>
