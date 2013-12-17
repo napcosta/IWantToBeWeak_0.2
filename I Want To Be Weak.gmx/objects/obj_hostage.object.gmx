@@ -82,8 +82,10 @@ if(place_meeting(x + area_arround,y,obj_playerSS) ||
             obj_global_vars.player_is_moving = false;
             talked = true;
         }
-        if talked
+        if talked {
             alarm[0] = 120;
+            obj_playerSS.hostageSaved = true;
+            }
 }
 </string>
           </argument>

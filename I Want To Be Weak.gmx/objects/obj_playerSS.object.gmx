@@ -249,8 +249,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-//buttons for quick access and debug
+            <string>//buttons for quick access and debug
 giveHealth = keyboard_check_pressed(ord('U'));
 giveBigFireball = keyboard_check_pressed(ord('I'));
 giveSmallFireball = keyboard_check_pressed(ord('O'));
@@ -271,10 +270,13 @@ if giveBigFireball {
     obj_inventory.hasBigFireball = false;
     obj_inventory.hasSmallFireball = false;
     obj_inventory.hasSlingshot = true;
+    obj_inventory.hasShovel = true;
     obj_inventory.ammo = 100;
     obj_inventory.dirtBlocks = 100;
+    obj_inventory.stairBlocks = 15;
 }
 
+//mouse actions
 MouseButton = mouse_check_button_pressed(mb_left);
 
 if (alarm[1] &lt; 0 and MouseButton) {
@@ -467,6 +469,7 @@ if (alarm[1] &lt; 0 and MouseButton) {
           <argument>
             <kind>1</kind>
             <string>onStairs = true;
+grounded = true;
 </string>
           </argument>
         </arguments>

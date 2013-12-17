@@ -12,6 +12,7 @@ fallCounter = 0;
 collisionArea = true;
 dir = 1;
 
+hostageSaved = false;
 grounded = true;
 onStairs = false;
 
