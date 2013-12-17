@@ -25,11 +25,10 @@ if Key_CycleInvRight {
 }
 
 if ((hasSlingshot && ammo>0 && inventoryList[selected] == "Weapon")
-        or (hasBigFireball && inventoryList[selected] == "Weapon")
-        or (hasSmallFireball && inventoryList[selected] == "Weapon")
-        or (hasShovel && inventoryList[selected] == "Shovel")
-        or (dirtBlocks>0 && inventoryList[selected] == "Dirt")
-        or (stairBlocks>0 && inventoryList[selected] == "Stair")
+        or ((hasSmallFireball or hasBigFireball) && inventoryList[selected] == "Weapon")
+        or (hasSlingshot && hasShovel && inventoryList[selected] == "Shovel")
+        or (hasSlingshot && dirtBlocks>0 && inventoryList[selected] == "Dirt")
+        or (hasSlingshot && stairBlocks>0 && inventoryList[selected] == "Stair")
         or wait == selected)
     validSelection = true;
 else

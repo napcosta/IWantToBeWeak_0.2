@@ -35,3 +35,17 @@ if place_meeting(x, y+vsp ,par_wall)
     vsp=0;
     
 }
+
+if place_meeting(x+hsp, y ,par_wall_unbreakable)
+{
+    while(!place_meeting(x+sign(hsp), y, par_wall_unbreakable)) x+=sign(hsp);
+    hsp=0;
+}
+
+if place_meeting(x, y+vsp ,par_wall_unbreakable)
+{
+    while(!place_meeting(x, y+sign(vsp), par_wall_unbreakable)) y+=sign(vsp);
+    if(sign(vsp) == 1){grounded = true;}
+    vsp=0;
+    
+}

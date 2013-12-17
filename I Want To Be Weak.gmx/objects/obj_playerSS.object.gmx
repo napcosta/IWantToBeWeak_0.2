@@ -297,7 +297,7 @@ if (alarm[1] &lt; 0 and MouseButton) {
     }
     else if (obj_inventory.hasSmallFireball and obj_inventory.inventoryList[selected] == "Weapon")
     {
-        fireball = instance_create(obj_playerSS.x, obj_playerSS.y, obj_fireball);
+        fireball = instance_create(obj_playerSS.x, obj_playerSS.y-45, obj_smallfireball);
         with(fireball)
         {
             move_towards_point(mouse_x, mouse_y, 8);
