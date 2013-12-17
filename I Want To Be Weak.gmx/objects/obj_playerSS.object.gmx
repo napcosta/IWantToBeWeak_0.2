@@ -271,6 +271,7 @@ if giveBigFireball {
     obj_inventory.hasBigFireball = false;
     obj_inventory.hasSmallFireball = false;
     obj_inventory.hasSlingshot = true;
+    obj_inventory.hasShovel = true;
     obj_inventory.ammo = 100;
     obj_inventory.dirtBlocks = 100;
 }
