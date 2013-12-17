@@ -461,14 +461,36 @@ direction_x = direction_x / length;
 direction_y = direction_y / length;
 
 if(mouse_check_button(mb_left) &amp;&amp; can_fireball) {
-    fireball = instance_create(x,y, obj_fireball);
+    if obj_inventory.hasBigFireball
+        fireball = instance_create(x,y, obj_fireball);
+    else if obj_inventory.hasSmallFireball
+        fireball = instance_create(x,y, obj_smallfireball);
+        
     fireball.radius = fireball_radius;
     fireball.hspeed = direction_x*fireball_speed;
     fireball.vspeed = direction_y*fireball_speed;
-    fireball.sprite_index = fireball_sprite;
+//    fireball.sprite_index = fireball_sprite;
     fireball.explosion_scale = fireball_explosion_scale;
     can_fireball = false;
     alarm[0] = 20;
+}
+
+//buttons for quick access and debug
+giveHealth = keyboard_check_pressed(ord('U'));
+giveBigFireball = keyboard_check_pressed(ord('I'));
+giveSmallFireball = keyboard_check_pressed(ord('O'));
+
+if giveHealth
+    health = 100;
+
+if giveBigFireball {
+    obj_inventory.hasBigFireball = true;
+    obj_inventory.hasSmallFireball = false;
+    obj_inventory.hasSlingshot = false;
+} else if giveSmallFireball {
+    obj_inventory.hasBigFireball = false;
+    obj_inventory.hasSmallFireball = true;
+    obj_inventory.hasSlingshot = false;
 }
 </string>
           </argument>
@@ -569,12 +591,13 @@ if(mouse_check_button(mb_left) &amp;&amp; can_fireball) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>fireball_scale = 0.05;
+            <string>
 has_map = true;
-fireball_radius = 60;
 
-fireball_sprite = spr_smallFireball;
-fireball_explosion_scale = 0.75;
+obj_inventory.hasSmallFireball = true;
+obj_inventory.hasBigFireball = false;
+
+
 
 instance_create(200, 380, obj_e01);
 instance_create(550, 380, obj_e01);

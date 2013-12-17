@@ -107,7 +107,6 @@
     <instance objName="obj_cloud" x="928" y="416" name="inst_7610A19C" locked="0" code="" scaleX="0.827585995197296" scaleY="0.727272987365723" colour="4294967295" rotation="0"/>
     <instance objName="obj_cloud" x="992" y="416" name="inst_692BFC3F" locked="0" code="" scaleX="0.827585995197296" scaleY="0.727272987365723" colour="4294967295" rotation="0"/>
     <instance objName="obj_cloud" x="1056" y="416" name="inst_02949D3B" locked="0" code="" scaleX="0.827585995197296" scaleY="0.727272987365723" colour="4294967295" rotation="0"/>
-    <instance objName="obj_cloud" x="1120" y="416" name="inst_BA0BF036" locked="0" code="" scaleX="0.827585995197296" scaleY="0.727272987365723" colour="4294967295" rotation="0"/>
     <instance objName="obj_cloud" x="1184" y="416" name="inst_EA4A4931" locked="0" code="" scaleX="0.827585995197296" scaleY="0.727272987365723" colour="4294967295" rotation="0"/>
     <instance objName="obj_cloud" x="1184" y="384" name="inst_DA332079" locked="0" code="" scaleX="0.827585995197296" scaleY="0.727272987365723" colour="4294967295" rotation="0"/>
     <instance objName="obj_cloud" x="1184" y="352" name="inst_53815808" locked="0" code="" scaleX="0.827585995197296" scaleY="0.727272987365723" colour="4294967295" rotation="0"/>
@@ -176,6 +175,8 @@
     <instance objName="obj_heaven_npc" x="107" y="711" name="inst_D73152FA" locked="0" code="filename = &quot;heaven_npc2.txt&quot;;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_global_vars" x="14" y="18" name="inst_C16DD9BF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_inventory" x="727" y="110" name="inst_66CF6E25" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ChangeRoomProto2" x="829" y="257" name="inst_FD10C627" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_ChangeRoom01" x="1119" y="416" name="inst_6ED55ABE" locked="0" code="" scaleX="0.827585995197296" scaleY="0.727272987365723" colour="4294967295" rotation="0"/>
     <instance objName="obj_textbox" x="1160" y="399" name="inst_A1C95673" locked="0" code="file_name = &quot;intro3.txt&quot;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
