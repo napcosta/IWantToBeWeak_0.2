@@ -92,6 +92,7 @@ explosion_scale = 1.5;
           <argument>
             <kind>1</kind>
             <string>destroy_list = circular_collision(x,y, radius, par_can_die, true, true);
+destroy_enemies = circular_collision(x,y, radius, obj_e01, true, true);
 
 if(destroy_list != noone) {    
     for (i=0; i &lt; ds_list_size(destroy_list); i++) {
@@ -100,16 +101,25 @@ if(destroy_list != noone) {
             instance_destroy();
         }
     }
-    
-    sprite_index = spr_bomb;
-    hspeed = 0;
-    vspeed = 0;
-    image_speed = 0.5;
-    image_xscale = explosion_scale;
-    image_yscale = explosion_scale;
-    
-    alarm[0] = 60;
 }
+
+if(destroy_enemies != noone){
+    for (i=0; i &lt; ds_list_size(destroy_enemies); i++) {
+        something = ds_list_find_value(destroy_enemies,i);
+        with(something) {
+            instance_destroy();
+        }
+    }
+}
+    
+sprite_index = spr_bomb;
+hspeed = 0;
+vspeed = 0;
+image_speed = 0.5;
+image_xscale = explosion_scale;
+image_yscale = explosion_scale;
+
+alarm[0] = 60;
 </string>
           </argument>
         </arguments>
@@ -133,6 +143,7 @@ if(destroy_list != noone) {
           <argument>
             <kind>1</kind>
             <string>destroy_list = circular_collision(x,y, radius, par_can_die, true, true);
+destroy_enemies = circular_collision(x,y, radius, obj_e01, true, true);
 
 if(destroy_list != noone) {    
     for (i=0; i &lt; ds_list_size(destroy_list); i++) {
@@ -141,16 +152,26 @@ if(destroy_list != noone) {
             instance_destroy();
         }
     }
-    
-    sprite_index = spr_bomb;
-    hspeed = 0;
-    vspeed = 0;
-    image_speed = 0.5;
-    image_xscale = explosion_scale;
-    image_yscale = explosion_scale;
-    
-    alarm[0] = 60;
 }
+
+if(destroy_enemies != noone){
+    for (i=0; i &lt; ds_list_size(destroy_enemies); i++) {
+        something = ds_list_find_value(destroy_enemies,i);
+        with(something) {
+            instance_destroy();
+        }
+    }
+}
+    
+sprite_index = spr_bomb;
+hspeed = 0;
+vspeed = 0;
+image_speed = 0.5;
+image_xscale = explosion_scale;
+image_yscale = explosion_scale;
+
+alarm[0] = 60;
+
 </string>
           </argument>
         </arguments>

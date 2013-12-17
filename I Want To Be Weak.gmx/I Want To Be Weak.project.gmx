@@ -380,10 +380,9 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_01</room>
+    <room>rooms\rm_intro_heaven</room>
     <room>rooms\rm_Dungeon1</room>
     <room>rooms\rm_SSPrototype2</room>
-    <room>rooms\room10</room>
-    <room>rooms\rm_intro_heaven</room>
     <room>rooms\rm_0</room>
     <room>rooms\rm_father</room>
     <room>rooms\rm_intro_hell</room>
