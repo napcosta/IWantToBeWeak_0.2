@@ -466,11 +466,11 @@ if(mouse_check_button(mb_left) &amp;&amp; can_fireball) {
     else if obj_inventory.hasSmallFireball
         fireball = instance_create(x,y, obj_smallfireball);
         
-    fireball.radius = fireball_radius;
+//    fireball.radius = fireball_radius;
     fireball.hspeed = direction_x*fireball_speed;
     fireball.vspeed = direction_y*fireball_speed;
 //    fireball.sprite_index = fireball_sprite;
-    fireball.explosion_scale = fireball_explosion_scale;
+//    fireball.explosion_scale = fireball_explosion_scale;
     can_fireball = false;
     alarm[0] = 20;
 }
